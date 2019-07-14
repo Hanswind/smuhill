@@ -13,7 +13,7 @@
   margin: 0;
   background-color: #cccccc;
   width:300px;
-  height:95%;
+  height:100%;
   overflow:hidden;
 }
 
@@ -22,27 +22,17 @@
   background-color: #bbbbbb;
 
   width:calc(100% - 700px);
-  height:65%;
+  height:100%;
   overflow:hidden;
 
 }
 
 .section3 {
-  float:left;
-  background-color: #dddddd;
-
-  width:calc(100% - 700px);
-  height:30%;
-  overflow:hidden;
-
-}
-
-.section4 {
-  flat:right;
+  float:right;
   margin: 0;
   background-color: #aaaaaa;
   width:400px;
-  height:95%;
+  height:100%;
   overflow:hidden;
 }
 
@@ -5380,6 +5370,7 @@ a.list-group-item-danger.active:focus {
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  x-index:1;
 }
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {
