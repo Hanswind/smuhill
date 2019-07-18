@@ -5,6 +5,7 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/* 레이아웃 */
 .wrapper{
   height: 100%;
 }
@@ -21,7 +22,7 @@
   float:left;
   background-color: #bbbbbb;
 
-  width:calc(100% - 700px);
+
   height:100%;
   overflow:hidden;
 
@@ -35,6 +36,24 @@
   height:100%;
   overflow:hidden;
 }
+/* 반은형 레이아웃 */
+@media screen and (max-width: 768px){   /*전체 창크기 750px 이하이면 sec1, 3숨기고 2를 100%로로 */
+  .section1{
+    display:none;
+  }
+  .section2{
+    width:100%;
+  }
+  .section3{
+    display:none;
+  }
+}
+@media screen and (min-width: 768px){
+  .section2{
+    width:calc(100% - 700px);
+  }
+}
+
 
 
 html {
