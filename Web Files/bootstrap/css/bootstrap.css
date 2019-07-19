@@ -36,6 +36,15 @@
   height:100%;
   overflow:hidden;
 }
+
+.chatbot_Flow {
+  display : block;
+  border: 1px solid black;
+  overflow: hidden;
+  height: 80%;
+  background-color: #e3e3e3;
+
+}
 /* 반은형 레이아웃 */
 @media screen and (max-width: 768px){   /*전체 창크기 750px 이하이면 sec1, 3숨기고 2를 100%로로 */
   .section1{
