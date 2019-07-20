@@ -38,18 +38,20 @@
 }
 
 .chatbot_Flow {
+  margin-top: 87px;
   display : block;
   border: 1px solid black;
   overflow: hidden;
-  height: 70%;
+  height: 90%;
   background-color: #e3e3e3;
   overflow-x: scroll;
   overflow-y:scroll;
   position:sticky;
   background-image: url("bg.jpg");
   width: 100%;
-
 }
+
+
 /* 반은형 레이아웃 */
 @media screen and (max-width: 768px){   /*전체 창크기 750px 이하이면 sec1, 3숨기고 2를 100%로로 */
   .section1{
@@ -81,6 +83,13 @@
   height:2000px;
 }
 
+/*svg용 스크롤 바 */
+.chatbot_Flow::-webkit-scrollbar {width: 10px; height: 10px; background-color: #f5f5f5; }
+.chatbot_Flow::-webkit-scrollbar-button:start:decrement,
+.chatbot_Flow::-webkit-scrollbar-button:end:increment {display: block; width: 0px;height: 0px;}
+.chatbot_Flow::-webkit-scrollbar-track {  background: rgba(0,0,0,.05); }
+.chatbot_Flow::-webkit-scrollbar-thumb {  border-radius: 10px; background-color : rgb(0,0,0,0.3);  }
+.chatbot_Flow::-webkit-scrollbar-thumb:hover { background-color : rgb(28,58,148);  }
 
 html {
   font-family: sans-serif;
@@ -4124,10 +4133,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
-  .navbar-header {
-    float: left;
-  }
+
 }
 .navbar-collapse {
   padding-right: 15px;
@@ -6150,8 +6156,6 @@ button.close {
 
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-    -webkit-perspective: 1000;
-            perspective: 1000;
   }
   .carousel-inner > .item.next,
   .carousel-inner > .item.active.right {
