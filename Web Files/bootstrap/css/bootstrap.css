@@ -41,8 +41,13 @@
   display : block;
   border: 1px solid black;
   overflow: hidden;
-  height: 80%;
+  height: 70%;
   background-color: #e3e3e3;
+  overflow-x: scroll;
+  overflow-y:scroll;
+  position:sticky;
+  background-image: url("bg.jpg");
+  width: 100%;
 
 }
 /* 반은형 레이아웃 */
@@ -63,6 +68,18 @@
   }
 }
 
+.tool{
+  position:sticky;
+  top: 50px;
+  width: 100%;
+  background-color:#ffffcc;
+  height:175px;
+
+}
+.svg-chart{
+  width: 2000px;
+  height:2000px;
+}
 
 
 html {
