@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
     <style>
 
 
@@ -27,12 +28,23 @@
     </nav> <!-- 상단고정바-->
 
     <section class="wrapper"><!--반응형 웹 구조-->
-        <div class="section1"></div> <!-- 좌측에 블럭들 위치해있는 section-->
+        <div class="section1">
+            <svg class="templete" xmlns="http://www.w3.org/2000/svg">
+                <foreignObject width="100%" height="100%">
+                        <div class="form1" xmlns="http://www.w3.org/1999/xhtml">폼1</div>
+                </foreignObject>
+            </svg>
+        </div> <!-- 좌측에 블럭들 위치해있는 section-->
         <div class="section2">
             <div class="section2_1"></div>  <!-- 중하에 시각적 블럭 영역 svg section-->
             <div class="chatbot_Flow">
 
-                <svg class="svg-chart"></svg>
+                <svg class="svg-chart"  xmlns="http://www.w3.org/2000/svg">
+                    <foreignObject width="100%" height="100%">
+                            <div class="form1 outer" xmlns="http://www.w3.org/1999/xhtml">폼1</div>
+                            <div class="form1" xmlns="http://www.w3.org/1999/xhtml">폼2</div>
+                    </foreignObject>
+                </svg>
             </div> <!-- 중상에 선택한 요소 조작 section-->
         </div>
         <div class="section3"><!-- 웇흑에 미리보기 section-->
@@ -44,5 +56,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
