@@ -5,23 +5,66 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*nav 프로필 영역 */
+.navbar-profile, .navbar-profile:visited, .navbar-profile:active{
+  color: whitesmoke;
+}
+.navbar-profile:hover {
+  color: #aaaaaa;
+}
+
+.navbar-proimg {
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-top: 10px!important;
+  margin-bottom: 10px!important;
+  border-radius:20px;
+  background-color:#aaaaaa;
+  margin:10px;
+}
+
+
+/* 레이아웃 */
 .wrapper{
   height: 100%;
 }
 .section1 {
   float:left;
   margin: 0;
-  background-color: #cccccc;
+  background-color: #ffffff;
+  border:1px solid #dddddd;
   width:300px;
   height:100%;
   overflow:hidden;
 }
+.elements_section {
+  top:150px;
+  background-color: #000000;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position:sticky;
 
+  margin:3px;
+  height:75%;
+}
+
+.madang {
+  text-align: center;
+  width: 289px;
+  height: 5%;
+  position: fixed;
+  bottom:1px;
+  margin:4px;
+  background-color:#9acfea;
+  z-index: auto;
+}
 .section2 {
   float:left;
-  background-color: #bbbbbb;
+  background-color: #eeeeee;
 
-  width:calc(100% - 700px);
+
+
   height:100%;
   overflow:hidden;
 
@@ -34,7 +77,88 @@
   width:400px;
   height:100%;
   overflow:hidden;
+
 }
+
+.chatbot_Flow {
+  margin-top: 150px;
+  display : block;
+  border: 1px solid #dddddd;
+  overflow: hidden;
+  height: 80%;
+  background-color: #e3e3e3;
+  overflow-x: scroll;
+  overflow-y:scroll;
+  position:sticky;
+  background-image: url("bg.jpg");
+  width: 90%;
+
+  margin-left:5%;
+  margin-right:5%;
+}
+
+
+/* 반은형 레이아웃 */
+@media screen and (max-width: 768px){   /*전체 창크기 750px 이하이면 sec1, 3숨기고 2를 100%로로 */
+  .section1{
+    display:none;
+  }
+  .section2{
+    width:100%;
+  }
+  .section3{
+    display:none;
+  }
+}
+@media screen and (min-width: 768px){
+  .section2{
+    width:calc(100% - 700px);
+  }
+}
+
+.tool{
+  position:sticky;
+  top: 250px;
+  width: 100%;
+  background-color:#ffffcc;
+  height:175px;
+
+}
+.svg-chart{
+  width: 2000px;
+  height:2000px;
+}
+/*템플릿 박스*/
+.templetebox{
+  height: 1200px;
+  background-color: teal;
+}
+
+.templete{
+  background-color: green;
+  display: inline-block; 
+  width: 50px;
+  height:50px;
+  margin: 30px; 
+
+
+}
+
+.form1{
+  background-color: green;
+  display: inline-block;
+  width:50px;
+  height: 50px;
+  z-index: 99;
+}
+
+/*svg용 스크롤 바 */
+.elements_section::-webkit-scrollbar, .chatbot_Flow::-webkit-scrollbar {width: 10px; height: 10px; background-color: #f5f5f5; }
+.chatbot_Flow::-webkit-scrollbar-button:start:decrement,
+.elements_section::-webkit-scrollbar-button:end:increment, .chatbot_Flow::-webkit-scrollbar-button:end:increment {display: block; width: 0px;height: 0px;}
+.elements_section::-webkit-scrollbar-track, .templete.chatbot_Flow::-webkit-scrollbar-track {  background: rgba(0,0,0,.05); }
+.elements_section::-webkit-scrollbar-thumb, .chatbot_Flow::-webkit-scrollbar-thumb {  border-radius: 10px; background-color : rgb(0,0,0,0.3);  }
+.elements_section::-webkit-scrollbar-thumb:hover, .chatbot_Flow::-webkit-scrollbar-thumb:hover { background-color : rgb(28,58,148);  }
 
 
 html {
@@ -1598,24 +1722,10 @@ pre code {
 .container {
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0;
 }
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
+
+
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
@@ -4093,10 +4203,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
-  .navbar-header {
-    float: left;
-  }
+
 }
 .navbar-collapse {
   padding-right: 15px;
@@ -4204,7 +4311,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-profile {
   float: right;
   height: 50px;
-  padding: 15px 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-size: 18px;
   font-weight:500;
 }
@@ -6119,8 +6227,6 @@ button.close {
 
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-    -webkit-perspective: 1000;
-            perspective: 1000;
   }
   .carousel-inner > .item.next,
   .carousel-inner > .item.active.right {
