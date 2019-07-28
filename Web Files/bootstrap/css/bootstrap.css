@@ -52,11 +52,12 @@
 .madang {
   text-align: center;
   width: 289px;
-  height: 8%;
+  height: 5%;
   position: fixed;
   bottom:1px;
   margin:4px;
   background-color:#9acfea;
+  z-index: auto;
 }
 .section2 {
   float:left;
