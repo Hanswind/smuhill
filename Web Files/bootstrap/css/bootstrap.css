@@ -32,7 +32,8 @@
 .section1 {
   float:left;
   margin: 0;
-  background-color: #cccccc;
+  background-color: #ffffff;
+  border:1px solid #dddddd;
   width:300px;
   height:100%;
   overflow:hidden;
@@ -48,6 +49,15 @@
   height:75%;
 }
 
+.madang {
+  text-align: center;
+  width: 289px;
+  height: 8%;
+  position: fixed;
+  bottom:1px;
+  margin:4px;
+  background-color:#9acfea;
+}
 .section2 {
   float:left;
   background-color: #eeeeee;
