@@ -39,21 +39,21 @@
   overflow:hidden;
 }
 .elements_section {
-  top:150px;
-  background-color: #000000;
+  top:100px;
+  background-color: #eeffee;
   overflow-x: hidden;
   overflow-y: scroll;
   position:sticky;
-
+  text-align: center;
   margin:3px;
-  height:75%;
+  height: 85%;
 }
 
 .madang {
   text-align: center;
-  width: 289px;
-  height: 5%;
-  position: fixed;
+  width: 270px;
+  height: 20px;
+  block-radius : 10px;
   bottom:1px;
   margin:4px;
   background-color:#9acfea;
@@ -98,7 +98,7 @@
 }
 
 
-/* 반은형 레이아웃 */
+/* 반응형 레이아웃 */
 @media screen and (max-width: 768px){   /*전체 창크기 750px 이하이면 sec1, 3숨기고 2를 100%로로 */
   .section1{
     display:none;
@@ -116,6 +116,7 @@
   }
 }
 
+
 .tool{
   position:sticky;
   top: 250px;
@@ -129,19 +130,23 @@
   height:2000px;
 }
 /*템플릿 박스*/
-.templetebox{
-  height: 1200px;
-  background-color: teal;
-}
 
 .templete{
-  background-color: green;
+  background-color: lavender;
   display: inline-block; 
-  width: 50px;
-  height:50px;
-  margin: 30px; 
+  width: 110px;
+  height:110px;
+  margin: 10px;
+  border-radius:10px;
+}
 
-
+.templete_adv {
+  background-color: lavender;
+  display: inline-block;
+  width: 220px;
+  height:30px;
+  margin: 5px;
+  border-radius:10px;
 }
 
 .form1{
@@ -152,7 +157,8 @@
   z-index: 99;
 }
 
-/*svg용 스크롤 바 */
+
+/*div용 스크롤 바 */
 .elements_section::-webkit-scrollbar, .chatbot_Flow::-webkit-scrollbar {width: 10px; height: 10px; background-color: #f5f5f5; }
 .chatbot_Flow::-webkit-scrollbar-button:start:decrement,
 .elements_section::-webkit-scrollbar-button:end:increment, .chatbot_Flow::-webkit-scrollbar-button:end:increment {display: block; width: 0px;height: 0px;}
