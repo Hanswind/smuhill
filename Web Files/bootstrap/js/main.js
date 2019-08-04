@@ -1,22 +1,24 @@
 var i=1;
 $(".templete1").click(function(){
-    var $element=$('<div class="form1 outer seq'+i+'" xmlns="http://www.w3.org/1999/xhtml"/>').text("폼1");
+    var $element=$('<div class="templete1-body"><div class="templete1-uparrow">&#8593</div><div class="templete1-text" >text</div><div class="templete1-downarrow">&#8595</div></div>')
     $(".svg-foreign").append($element);
     $element.css({
         "margin":"20px"
-    })
+    });
     $element.draggable();
     i++;
 });
+$(".entry").draggable();
+
 $(".templete2").click(function(){
-    var $element=$('<div class="form1 outer" xmlns="http://www.w3.org/1999/xhtml"/>').text("폼2");
-    $(".svg-foreign").append($element)
+    var $element=$('<div class="templete2-body"><div class="uparrow">&#8593</div><div class="templete2-text">text</div><div class="templete2-buttonbox"><button class="templete2-button btn1">+</button><button class="templete2-button btn2">+</button><button class="templete2-button btn3">+</button></div><div class="downarrow">&#8595</div></div>');
+    $(".svg-foreign").append($element);
     $element.css({
         "margin":"20px"
-    })
+    });
     $element.draggable();
+    
 });
-
 /* drag and drop */
 function allowDrop(ev) {
     ev.preventDefault();
