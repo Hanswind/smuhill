@@ -53,7 +53,7 @@
   text-align: center;
   width: 270px;
   height: 20px;
-  block-radius : 10px;
+  border-radius : 10px;
   bottom:1px;
   margin:4px;
   background-color:#9acfea;
@@ -118,8 +118,110 @@
   margin-left:5%;
   margin-right:5%;
 }
+.entry{
+  display: inline-block;
+}
+.entry-body{
+  width: 70px;
+  height: 70px;
+  background-color: grey;
+  display:inline;
+  border-radius: 50px;
+  color: black;
+  padding: 20px;
+}
 
+.entry-downarrow{
+  border-radius: 70px;  
+  background-color: #f1f0f0;
+  width: 20%;
+  margin: 0px 32px;
+  display: inline-block;
+  text-align: center;
+  margin: 5px 10px 0px 25px;
+}
+.templete1-body{
+  border: solid 1px grey;
+  background-color: lavender;
+  text-align: center;
+  width: 130px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 0px 10px 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.templete1-text{
+  background-color: #f1f0f0;
+  border-radius: 10px;
+  width: 90%;
+}
+.templete1-uparrow{
+  border-radius: 70px;
+  background-color: #f1f0f0;
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  margin: 0px 10px 0px 35px;
+  position: relative;
+  top: -10px;
+  
+}
+.templete1-downarrow{
+  border-radius: 70px;
+  background-color: #f1f0f0;
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 0px 0px 35px;
+  position: relative;
+  bottom: -5px;
 
+}
+.templete2-body{
+  border: solid 1px grey;
+  border-radius: 10px;
+  background-color: lavender;
+  width: 150px;
+  height:160px;
+  display: inline-block;
+}
+
+.templete2-text{
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;
+  width: 90%; 
+  background-color: #f1f0f0; 
+}
+.templete2-buttonbox{
+  border: solid 1px grey;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  bottom: 50px;
+  
+} 
+.uparrow{
+  position: relative;
+  top: -5px;
+  text-align: center;
+  display: block;
+  border-radius: 50px;
+  background-color: #f1f0f0;
+  width: 20%;
+  margin: 0px 60px;
+}
+.downarrow{
+  text-align: center;
+  display: inline-block;
+  border-radius: 70px;
+  background-color: #f1f0f0;
+  width: 20%;
+  margin: 0px 60px;
+  position: absolute;
+}
+}
 /* 반응형 레이아웃 */
 @media screen and (max-width: 768px){   /*전체 창크기 750px 이하이면 sec1, 3숨기고 2를 100%로로 */
   .section1{
@@ -178,6 +280,7 @@
   height: 50px;
   z-index: 99;
 }
+
 
 
 /*div용 스크롤 바 */
@@ -5506,7 +5609,7 @@ a.list-group-item-danger.active:focus {
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  x-index:1;
+  z-index:1;
 }
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {

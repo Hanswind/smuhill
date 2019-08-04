@@ -5,6 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link href="https://jsplumbtoolkit.com/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://jsplumbtoolkit.com/css/jsplumbtoolkit-defaults.css">
+    <link rel="stylesheet" href="https://jsplumbtoolkit.com/css/jsplumbtoolkit-demo.css">
     <style>
 
 
@@ -55,8 +58,23 @@
             <div class="section2_1"></div>  <!-- 중하에 시각적 블럭 영역 svg section-->
             <div class="chatbot_Flow">
 
-                <svg class="svg-chart"  xmlns="http://www.w3.org/2000/svg" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <foreignObject class="svg-foreign" width="100%" height="100%">
+                <svg class="svg-chart" id="svg-chart"  xmlns="http://www.w3.org/2000/svg" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <foreignObject class="svg-foreign" id="svg-foreign" width="100%" height="100%">
+                        <div class="entry">
+                            <div class="entry-body">entry</div>
+                            <div class="entry-downarrow">&#8595</div>
+                        </div>
+                        <div class="templete1-body window" id="dragDropWindow1">
+                            <div class="templete1-uparrow">&#8593</div>
+                            <div class="templete1-text" >text</div>
+                            <div class="templete1-downarrow">&#8595</div>
+                        </div>
+                        <div class="templete1-body window" id="dragDropWindow2">
+                                <div class="templete1-uparrow">&#8593</div>
+                                <div class="templete1-text" >text</div>
+                                <div class="templete1-downarrow">&#8595</div>
+                        </div>
+
                     </foreignObject>
                 </svg>
             </div> <!-- 중상에 선택한 요소 조작 section-->
@@ -74,5 +92,51 @@
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 <script src="js/main.js"></script>
+<script src="https://jsplumbtoolkit.com/community/demo/draggableConnectors/lib/jsplumb.js"></script>
+<script src="https://jsplumbtoolkit.com/js/jquery.validate.js"></script>
+<script src="https://jsplumbtoolkit.com/js/additional-methods.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+jsPlumb.ready(function () {
+
+var instance = jsPlumb.getInstance({
+    DragOptions: { cursor: 'pointer', zIndex: 2000 },
+    PaintStyle: { stroke: '#666' },
+    EndpointHoverStyle: { fill: "orange" },
+    HoverPaintStyle: { stroke: "orange" },
+    EndpointStyle: { width: 20, height: 16, stroke: '#666' },
+    Endpoint: "Rectangle",
+    Anchors: ["TopCenter", "TopCenter"],
+    Container: "svg-foreign",
+    MaxConnections: 1,
+    ConnectionsDetachable: false,
+});
+
+instance.batch(function () {
+
+    var color2 = "#316b31";
+    var exampleEndpoint2 = {
+        endpoint: ["Dot", { radius: 11 }],
+        paintStyle: { fill: color2 },
+        isSource: true,
+        scope: "green",
+        connectorStyle: { stroke: color2, strokeWidth: 6 },
+        connector: ["Bezier", { curviness: 63 } ],
+        maxConnections: 3,
+        isTarget: true,
+    };
+
+
+    var e1 = instance.addEndpoint('dragDropWindow1', { anchor: "BottomCenter" }, exampleEndpoint2);
+
+    var e2 = instance.addEndpoint('dragDropWindow2', { anchor: "BottomCenter" }, exampleEndpoint2);
+
+    instance.draggable(jsPlumb.getSelector(".svg-foreign .window"));
+});
+
+jsPlumb.fire("jsPlumbDemoLoaded", instance);
+
+});
+</script>
 </body>
 </html>
