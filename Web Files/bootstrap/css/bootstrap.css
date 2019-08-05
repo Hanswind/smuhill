@@ -40,7 +40,7 @@
 }
 .elements_section {
   top:100px;
-  background-color: #eeffee;
+  background-color: #eeeeee;
   overflow-x: hidden;
   overflow-y: scroll;
   position:sticky;
@@ -56,7 +56,7 @@
   border-radius : 10px;
   bottom:1px;
   margin:4px;
-  background-color:#9acfea;
+  background-color:#ffffff;
   z-index: auto;
 }
 .section2 {
@@ -73,7 +73,7 @@
 .section3 {
   float:right;
   margin: 0;
-  background-color: #aaaaaa;
+  background-color: #eeeeee;
   width:400px;
   height:100%;
   overflow:hidden;
@@ -256,7 +256,8 @@
 /*템플릿 박스*/
 
 .templete{
-  background-color: lavender;
+    border: 1px solid black;
+  background-color: #ffffff;
   display: inline-block; 
   width: 110px;
   height:110px;
