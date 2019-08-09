@@ -57,8 +57,8 @@ const jsPlumbOptions = {
   const jsPlumbInstance = jsPlumb.getInstance(jsPlumbOptions);
   
   jsPlumbInstance.makeSource('source', {
-    anchor: "Right"
+    anchor: "Center"
   });
   jsPlumbInstance.makeTarget("target", {
-    anchor: "Left"
+    anchor: "Center"
   });

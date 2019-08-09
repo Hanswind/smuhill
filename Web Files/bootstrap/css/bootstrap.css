@@ -149,6 +149,7 @@
   height: 70px;
   border-radius: 10px;
   display: inline-block;
+  position: relative;
 }
 .templete1-text{
   background-color: #f1f0f0;
@@ -250,6 +251,10 @@
 
 }
 .svg-chart{
+  width: 2000px;
+  height:2000px;
+}
+.svg-foreign{
   width: 2000px;
   height:2000px;
 }

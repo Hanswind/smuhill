@@ -59,7 +59,7 @@
             <div class="chatbot_Flow">
 
                 <div class="svg-chart" id="svg-chart"  xmlns="http://www.w3.org/2000/svg" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <div class="svg-foreign" id="connections" width="100%" height="100%">
+                    <div class="svg-foreign">
                         <div class="entry">
                             <div class="entry-body">entry</div>
                             <div class="entry-downarrow">&#8595</div>
@@ -96,6 +96,7 @@
 <script src="https://jsplumbtoolkit.com/js/jquery.validate.js"></script>
 <script src="https://jsplumbtoolkit.com/js/additional-methods.js"></script>
 <script src="https://js.stripe.com/v3/"></script>
+
 <script>
 jsPlumb.ready(function () {
 
@@ -131,7 +132,8 @@ instance.batch(function () {
 
     var e2 = instance.addEndpoint('dragDropWindow2', { anchor: "TopCenter" }, exampleEndpoint2);
 
-    instance.draggable(jsPlumb.getSelector(".window"));
+    instance.draggable(jsPlumb.getSelector(".svg-foreign .window"));
+    instance.draggable($(".window"));
 });
 
 jsPlumb.fire("jsPlumbDemoLoaded", instance);
