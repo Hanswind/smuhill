@@ -33,3 +33,32 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }
+
+const jsPlumbOptions = {
+    Connector: ['Straight'],
+    Container: "connections",
+    PaintStyle: {
+      strokeWidth: 2,
+      stroke: '#eee',
+      outlineWidth: 2,
+    },
+    Endpoint: [ "Dot", { radius: 1 } ],
+    ConnectionOverlays: [
+      ['Arrow', {
+        location: 1,
+        visible: true,
+        width: 15,
+        length: 15,
+        foldback: 1,
+      }],
+    ],
+  };
+  
+  const jsPlumbInstance = jsPlumb.getInstance(jsPlumbOptions);
+  
+  jsPlumbInstance.makeSource('source', {
+    anchor: "Right"
+  });
+  jsPlumbInstance.makeTarget("target", {
+    anchor: "Left"
+  });
