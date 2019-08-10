@@ -149,7 +149,7 @@
   height: 70px;
   border-radius: 10px;
   display: inline-block;
-  position: relative;
+  position: absolute;
 }
 .templete1-text{
   background-color: #f1f0f0;
