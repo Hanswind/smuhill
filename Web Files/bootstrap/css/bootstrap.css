@@ -62,9 +62,6 @@
 .section2 {
   float:left;
   background-color: #eeeeee;
-
-
-
   height:100%;
   overflow:hidden;
 
@@ -73,20 +70,33 @@
 .section3 {
   float:right;
   margin: 0;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   width:400px;
   height:100%;
   overflow:hidden;
 
 }
 
+.fold_layout {
+  display:block!important;
+  position: absolute;
+  margin-right: 50px;
+  right: 350px;
+  top: 70px;
+  font-size: 15px;
+  border: 1px solid #aaaaaa;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  transition: width 2s;
+}
 .preview {
     width: 350px;
     margin:25px;
     height:600px;
     top:100px;
     position: relative;
-    background: #fff;
+    border : 1px solid dimgray;
+    background: lightyellow;
 }
 
 .message {
@@ -108,11 +118,12 @@
   border: 1px solid #dddddd;
   overflow: hidden;
   height: 80%;
-  background-color: #e3e3e3;
+  background-color: #ffffff;
   overflow-x: scroll;
   overflow-y:scroll;
   position:sticky;
   background-image: url("bg.jpg");
+  background-repeat: repeat;
   width: 90%;
 
   margin-left:5%;
@@ -222,14 +233,13 @@
   margin: 0px 60px;
   position: absolute;
 }
-}
 /* 반응형 레이아웃 */
 @media screen and (max-width: 768px){   /*전체 창크기 750px 이하이면 sec1, 3숨기고 2를 100%로로 */
   .section1{
     display:none;
   }
   .section2{
-    width:100%;
+    width: 100%!important;
   }
   .section3{
     display:none;
