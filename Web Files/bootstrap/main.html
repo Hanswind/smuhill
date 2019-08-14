@@ -5,13 +5,17 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
-    <link href="https://jsplumbtoolkit.com/css/main.css" rel="stylesheet">
+    /*link href="https://jsplumbtoolkit.com/css/main.css" rel="stylesheet"*/
     <link rel="stylesheet" href="https://jsplumbtoolkit.com/css/jsplumbtoolkit-defaults.css">
-    <link rel="stylesheet" href="https://jsplumbtoolkit.com/css/jsplumbtoolkit-demo.css">
+    /*link rel="stylesheet" href="https://jsplumbtoolkit.com/css/jsplumbtoolkit-demo.css"*/
     <style>
-
+        /* 상업적 이용 가능 무료 폰트 - https://noonnu.cc/font_page/38 */
+        @font-face { font-family: 'NanumSquareRound'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff'); font-weight: normal; font-style: normal; }
+        * {font-family: NanumSquareRound, 나눔고딕;}
 
     </style>
+
+
 </head>
 <body>
     <nav class="navar navbar-inverse navbar-fixed-top">  <!-- 상단 nav 고정 바 -->
@@ -35,8 +39,12 @@
         <div class="section1">
             <div class="elements_section">
                             <br><p>기본 요소</p><hr>
-                            <div class="templete templete1" draggable="true" ondragstart="drag(event)" xmlns="http://www.w3.org/1999/xhtml">텍스트</div>
-                            <div class="templete templete2" xmlns="http://www.w3.org/1999/xhtml">리스트</div>
+                            <div class="templete templete1" id="text" draggable="true" ondragstart="drag(event)" xmlns="http://www.w3.org/1999/xhtml">
+                                <div id="text_icon"><p>___________<br>___________</p></div>
+                                <p style="font-size:16px; padding-top:2px;">텍스트</p>
+                            </div>
+                            <div class="templete templete2" xmlns="http://www.w3.org/1999/xhtml"><div id="list_icon"></div>
+                                <p style="font-size:16px; padding-top:2px;">리스트</div>
                             <div class="templete templete3" xmlns="http://www.w3.org/1999/xhtml">이미지</div>
                             <div class="templete templete4" xmlns="http://www.w3.org/1999/xhtml">동영상</div>
                             <div class="templete templete5" xmlns="http://www.w3.org/1999/xhtml">음성</div>

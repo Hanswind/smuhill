@@ -22,7 +22,7 @@ $(".templete2").click(function(){
 
 
 
-/* 레이아웃 접기*/
+/* 오른쪽 레이아웃 접기*/
 function fold_layout(){
     if(document.getElementById("fold_button").value == ">>"){
         document.getElementById("fold_button").value='<<';
@@ -55,6 +55,7 @@ function fold_layout(){
     }
     else{}
 }
+
 
 
 
