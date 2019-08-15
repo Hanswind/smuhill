@@ -131,29 +131,27 @@
   margin-right:5%;
 }
 .entry{
-  display: inline-block;
-}
-.entry-body{
   width: 70px;
   height: 70px;
   background-color: grey;
-  display:inline;
+  display:inline-block;
   border-radius: 50px;
   color: black;
   padding: 20px;
+  text-align: center;
+  position: absolute;
+}
+.entry-body{
+  background-color: lavender;
+  text-align: center;
+  width: 140%;
+  position: relative;
+  border-radius: 60px;
+  right: 5px;
 }
 
-.entry-downarrow{
-  border-radius: 70px;  
-  background-color: #f1f0f0;
-  width: 20%;
-  margin: 0px 32px;
-  display: inline-block;
-  text-align: center;
-  margin: 5px 10px 0px 25px;
-}
 .templete1-body{
-  margin-top: 20px;
+
   border: solid 1px grey;
   background-color: lavender;
   text-align: center;
