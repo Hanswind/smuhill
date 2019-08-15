@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/icon.css">
     <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
-    /*link href="https://jsplumbtoolkit.com/css/main.css" rel="stylesheet"*/
     <link rel="stylesheet" href="https://jsplumbtoolkit.com/css/jsplumbtoolkit-defaults.css">
-    /*link rel="stylesheet" href="https://jsplumbtoolkit.com/css/jsplumbtoolkit-demo.css"*/
     <style>
         /* 상업적 이용 가능 무료 폰트 - https://noonnu.cc/font_page/38 */
         @font-face { font-family: 'NanumSquareRound'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff'); font-weight: normal; font-style: normal; }
@@ -52,10 +51,26 @@
                                 </div>
 
                                 <p style="font-size:16px; padding-top:2px;">리스트</div>
-                            <div class="templete templete3" xmlns="http://www.w3.org/1999/xhtml">이미지</div>
-                            <div class="templete templete4" xmlns="http://www.w3.org/1999/xhtml">동영상</div>
-                            <div class="templete templete5" xmlns="http://www.w3.org/1999/xhtml">음성</div>
-                            <div class="templete templete6" xmlns="http://www.w3.org/1999/xhtml">임시</div>
+                            <div class="templete templete3" id="image" xmlns="http://www.w3.org/1999/xhtml">
+                                <div class = "icon" id="photo">
+                                    <div id="mountain"></div>
+                                    <div id="sun"></div>
+                                </div><p style="font-size:16px; padding-top:2px;">이미지</p></div>
+
+                            <div class="templete templete4" id="video" xmlns="http://www.w3.org/1999/xhtml">
+                                <div class = "icon" >
+                                    <div id="video_back"></div>
+                                    <div id="start"></div>
+                                </div>
+                                <p style="font-size:16px; padding-top:2px;">동영상</p></div>
+                            <div class="templete templete5" id="sound"xmlns="http://www.w3.org/1999/xhtml">
+                                <div class="icon"><div id="speaker"><p>)</p><p>)</p></div></div>
+                                <p style="font-size:16px; padding-top:2px;">음성</p>
+                            </div>
+                            <div class="templete templete6" xmlns="http://www.w3.org/1999/xhtml">
+                                <div class="icon"></div>
+                                <p style="font-size:16px; padding-top:2px;">파일</p>
+                            </div>
 
                             <hr><p>고급 요소</p><hr>
                             <div class="templete_adv templete1" xmlns="http://www.w3.org/1999/xhtml">알림메세지</div>
