@@ -1,11 +1,4 @@
 
-$(".templete2").click(function(){
-    var $element=$('<div class="templete2-body"><div class="uparrow">&#8593</div><div class="templete2-text">text</div><div class="templete2-buttonbox"><button class="templete2-button btn1">+</button><button class="templete2-button btn2">+</button><button class="templete2-button btn3">+</button></div><div class="downarrow">&#8595</div></div>');
-    $(".svg-foreign").append($element);
-    $element.draggable();
-    
-});
-
 
 
 /* 오른쪽 레이아웃 접기*/

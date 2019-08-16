@@ -1,7 +1,12 @@
 var numberOfTemplete1=0;
 var numberOfTemplete2=0;
 jsPlumb.ready(function () {
+    jsPlumb.draggable($(".templete2_1"));
+    $("#templete2_1").click(function(){
+        var $element=$('<div class="templete2-button" id="templete2_">text</div>');
+        $element.insertAfter($(".templete2-head"));
 
+    });
 
     var instance = jsPlumb.getInstance({
         DragOptions: { cursor: 'pointer' },
