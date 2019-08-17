@@ -346,6 +346,12 @@
 .elements_section::-webkit-scrollbar-thumb:hover, .chatbot_Flow::-webkit-scrollbar-thumb:hover { background-color : rgb(28,58,148);  }
 
 
+/* 기본요소 접기 */
+#fold_normal {
+  display: inline;
+  position:relative;
+  left: 70px;
+}
 
 
 

@@ -37,8 +37,8 @@
     <section class="wrapper"><!--반응형 웹 구조-->
         <div class="section1">
             <div class="elements_section">
-                            <br><p>기본 요소</p><hr>
-                            <div class="templete templete1" id="text" draggable="true" ondragstart="drag(event)" xmlns="http://www.w3.org/1999/xhtml">
+                            <div><br><p style="display: inline">기본 요소</p><div id="fold_normal">v</div><hr></div>
+                            <div class="templete templete1" id="text" xmlns="http://www.w3.org/1999/xhtml">
                                 <div class = "icon"><p>___________<br>___________</p></div>
                                 <p style="font-size:16px; padding-top:2px;">텍스트</p>
                             </div>
@@ -67,8 +67,11 @@
                                 <div class="icon"><div id="speaker"><p>)</p><p>)</p></div></div>
                                 <p style="font-size:16px; padding-top:2px;">음성</p>
                             </div>
-                            <div class="templete templete6" xmlns="http://www.w3.org/1999/xhtml">
-                                <div class="icon"></div>
+                            <div class="templete templete6" id="file"xmlns="http://www.w3.org/1999/xhtml">
+                                <div class="icon">
+                                    <div id="file_i"></div>
+                                    <div id="infile" style="font-size:2px;">----</div>
+                                </div>
                                 <p style="font-size:16px; padding-top:2px;">파일</p>
                             </div>
 
