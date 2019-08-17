@@ -193,7 +193,7 @@
   background-color: lavender;
   border: solid 1px grey;
   border-radius: 10px;
-  display: inline-block;
+  display: inline-table;
   position: absolute;
   padding: 10px 15px 30px 15px;
 }
