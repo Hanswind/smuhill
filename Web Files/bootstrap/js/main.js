@@ -35,9 +35,37 @@ function fold_layout(){
     else{}
 }
 
+/* 기본요소 접기 */
+function fold_normal(){
+    if($("#normal_elements").attr("value") == "open"){
+        $("#template").animate({height:0});
+        $("#normal_elements").attr("value", "close")
+        $(".fold_normal").css("display", "none")
+        $(".fold_normal2").css("display", "inline")
+    }
+    else{
+        $("#template").animate({height:390});
+        $("#normal_elements").attr("value", "open")
+        $(".fold_normal").css("display", "inline")
+        $(".fold_normal2").css("display", "none")
+    }
+}
 
-
-
+/* 고급요소 접기 */
+function fold_adv(){
+    if($("#adv_elements").attr("value") == "open"){
+        $("#adv_template").animate({height:0});
+        $("#adv_elements").attr("value", "close")
+        $(".fold_normal").css("display", "none")
+        $(".fold_normal2").css("display", "inline")
+    }
+    else{
+        $("#adv_template").animate({height:390});
+        $("#adv_elements").attr("value", "open")
+        $(".fold_normal").css("display", "inline")
+        $(".fold_normal2").css("display", "none")
+    }
+}
 
 
 /* drag and drop */

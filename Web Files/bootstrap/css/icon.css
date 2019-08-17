@@ -239,7 +239,7 @@
     height:20px;
     background-color:#fff;
     z-index:2;
-    border: 1px solid #999999;
+    border: 1px solid #aaa;
 }
 
 #file:hover .icon{
