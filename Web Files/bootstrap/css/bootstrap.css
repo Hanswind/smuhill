@@ -39,15 +39,16 @@
   overflow:hidden;
 }
 .elements_section {
-  top:100px;
+  top:150px;
   border: 1px solid black;
   background-color: #ffffff;
   overflow-x: hidden;
   overflow-y: scroll;
   position:sticky;
   text-align: center;
+
   margin:3px;
-  height: 85%;
+  height: 82%
 }
 
 .madang {
@@ -125,10 +126,10 @@
   position:sticky;
   background-image: url("bg.jpg");
   background-repeat: repeat;
-  width: 90%;
+  width: 96%;
 
-  margin-left:5%;
-  margin-right:5%;
+  margin-left:2%;
+  margin-right:2%;
 }
 .entry{
   width: 70px;
@@ -317,15 +318,87 @@
   color: #000000;
 }
 
+/* 고급 요소 동적 디자인 */
 
 .templete_adv {
-  background-color: lavender;
+  background-color: #dddddd;
   display: inline-block;
-  width: 220px;
-  height:30px;
-  margin: 5px;
+  width: 95%;
+  height:60px;
   border-radius:10px;
+  margin: 2.5%;
+  overflow: hidden;
 }
+.templete_adv:hover {
+  height: 100px;
+  transition-duration: 0.5s;
+}
+.templete_image {
+  display: inline-block;
+  margin:2%;
+  width: 50px;
+  height:83%;
+  background-color: #aaaaaa;
+}
+.templete_adv:hover .templete_image {
+  width:80px;
+  height:90%;
+  transition-duration: 0.5s;
+}
+
+.templete_name {
+  display: inline-block;
+  width: calc(90% - 50px);
+  height: 50%;
+  position:relative;
+  top:-25px;
+  background-color:#eeeeee;
+}
+.templete_adv:hover .templete_name {
+  width: calc(90% - 85px);
+  height: 15%;
+  top: -80px;
+  transition-duration: 0.6s;
+}
+.templete_dis {
+  display: inline-block;
+  width: calc(90% - 50px);
+  height: 30%;
+  overflow: hidden;
+  position: relative;
+  top: -29px;
+  left: 32px;
+  background-color: #bbbbbb;
+}
+.templete_adv:hover .templete_dis {
+  width: calc(90% - 85px);
+  height:70%;
+  top: -83px;
+  left: 47px;
+  transition-duration: 0.6s;
+}
+
+.templete_priview{
+  display: block;
+  position: relative;
+  width: 50px;
+  background-color: skyblue;
+  height: 10px;
+  top:40px;
+  opacity: 0;
+}
+
+.templete_adv:hover .templete_priview {
+  opacity: 1;
+  transition-duration: 0.5s;
+  width: 80px;
+  height: 20px;
+  top:70px;
+}
+
+
+
+
 
 .form1{
   background-color: green;
@@ -347,11 +420,20 @@
 
 
 /* 기본요소 접기 */
-.fold_normal {
-  display: inline;
+
+
+#fold1 {
+  position:absolute;
+  left: 20px;
+  top:30px;
+}
+#fold2 {
   position:absolute;
   left: 20px;
   top:24px;
+}
+.fold_normal {
+  display: inline;
   width: 0px;
   height: 16px;
   border-top:8px solid #999999;
@@ -361,21 +443,39 @@
 
 .fold_normal2{
   display: none;
-  position:absolute;
-  left: 20px;
-  top:18px;
   width: 0px;
   height: 14px;
   border-bottom:8px solid #999999;
   border-right: 8px solid transparent;
   border-left: 8px solid  transparent;
 }
+#fold3 {
+  position:relative;
+  left: -60px;
+  top: 14px;
+}
+#fold4 {
+  position:relative;
+  left: -60px;
+  top: -18px;
+}
+
+
 
 
 #template, #adv_template {
   overflow: hidden;
 }
 
+/* 요소이름 디자인 */
+#normal_elements, #adv_elements, #download_elements {
+  font-size: 22px;
+  font-weight: bold;
+  padding-top : 20px;
+  padding-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
 
 
 html {

@@ -40,14 +40,14 @@ function fold_normal(){
     if($("#normal_elements").attr("value") == "open"){
         $("#template").animate({height:0});
         $("#normal_elements").attr("value", "close")
-        $(".fold_normal").css("display", "none")
-        $(".fold_normal2").css("display", "inline")
+        $("#fold1").css("display", "none")
+        $("#fold2").css("display", "inline")
     }
     else{
-        $("#template").animate({height:390});
+        $("#template").animate({height:430});
         $("#normal_elements").attr("value", "open")
-        $(".fold_normal").css("display", "inline")
-        $(".fold_normal2").css("display", "none")
+        $("#fold1").css("display", "inline")
+        $("#fold2").css("display", "none")
     }
 }
 
@@ -56,14 +56,14 @@ function fold_adv(){
     if($("#adv_elements").attr("value") == "open"){
         $("#adv_template").animate({height:0});
         $("#adv_elements").attr("value", "close")
-        $(".fold_normal").css("display", "none")
-        $(".fold_normal2").css("display", "inline")
+        $("#fold3").css("display", "none")
+        $("#fold4").css("display", "inline")
     }
     else{
-        $("#adv_template").animate({height:390});
+        $("#adv_template").animate({height:410});
         $("#adv_elements").attr("value", "open")
-        $(".fold_normal").css("display", "inline")
-        $(".fold_normal2").css("display", "none")
+        $("#fold3").css("display", "inline")
+        $("#fold4").css("display", "none")
     }
 }
 
