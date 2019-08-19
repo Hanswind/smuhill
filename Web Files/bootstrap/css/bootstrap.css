@@ -124,7 +124,7 @@
   overflow-x: scroll;
   overflow-y:scroll;
   position:sticky;
-  background-image: url("bg.jpg");
+  background-image: url("./images/bg.jpg");
   background-repeat: repeat;
   width: 96%;
 
@@ -321,7 +321,7 @@
 /* 고급 요소 동적 디자인 */
 
 .templete_adv {
-  background-color: #dddddd;
+  background-color: #eeeeee;
   display: inline-block;
   width: 95%;
   height:60px;
@@ -332,33 +332,58 @@
 .templete_adv:hover {
   height: 100px;
   transition-duration: 0.5s;
+  background-color:#fff;
+  box-shadow: 1px 1px 1px 1px lightgray;
 }
 .templete_image {
-  display: inline-block;
-  margin:2%;
+  position:relative;
+  top:4px;
+  display: inline-block;;
   width: 50px;
-  height:83%;
-  background-color: #aaaaaa;
+  height:86%;
+  border-radius: 2px;
+  backgorund-color: #ffffff;
+}
+.templete_image img {
+
+  width:100%;
+  height:100%;
 }
 .templete_adv:hover .templete_image {
+  top: 7px;
   width:80px;
   height:90%;
   transition-duration: 0.5s;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px lightgray;
 }
 
 .templete_name {
   display: inline-block;
   width: calc(90% - 50px);
-  height: 50%;
+  height: 48%;
   position:relative;
-  top:-25px;
-  background-color:#eeeeee;
+  top:-66px;
+  background-color:#fff;
+  border-radius: 4px;
+}
+.templete_name > p {
+  position: relative;
+  top: 3px;
+  left: 0;
+  font-size: 17px;
+}
+.templete_adv:hover p {
+  font-size: 13px;
+  transition-duration: 0.5s;
 }
 .templete_adv:hover .templete_name {
   width: calc(90% - 85px);
-  height: 15%;
-  top: -80px;
+  height: 25%;
+  top: -86px;
+  left:3px;
   transition-duration: 0.6s;
+  background-color:rgb(255,192,0);
+  box-shadow: 0.5px 0.5px 0.5px 0.5px lightgray;
 }
 .templete_dis {
   display: inline-block;
@@ -366,34 +391,43 @@
   height: 30%;
   overflow: hidden;
   position: relative;
-  top: -29px;
-  left: 32px;
+  top: -63px;
+  left: 27px;
   background-color: #bbbbbb;
 }
 .templete_adv:hover .templete_dis {
   width: calc(90% - 85px);
-  height:70%;
+  height:60%;
   top: -83px;
-  left: 47px;
+  left: 45px;
   transition-duration: 0.6s;
+  background-color: #fff;
 }
 
 .templete_priview{
   display: block;
   position: relative;
   width: 50px;
-  background-color: skyblue;
+  background-color: #aaa;
   height: 10px;
-  top:40px;
+  top:-12px;
   opacity: 0;
+  z-index:3;
+  border: 1.5px solid #444444;
+  padding: 2px;
 }
 
+.templete_dis > p {
+  text-align: left;
+  padding-left: 3px;
+  padding-right: 3px;
+}
 .templete_adv:hover .templete_priview {
-  opacity: 1;
+  opacity: 0.7;
   transition-duration: 0.5s;
   width: 80px;
-  height: 20px;
-  top:70px;
+  height: 25px;
+  top:-25px;
 }
 
 
@@ -462,7 +496,6 @@
 
 
 
-
 #template, #adv_template {
   overflow: hidden;
 }
@@ -476,6 +509,11 @@
   border-radius: 4px;
   border: 1px solid black;
 }
+#alert_m > templete_name {
+  text-align: center;
+}
+
+
 
 
 html {

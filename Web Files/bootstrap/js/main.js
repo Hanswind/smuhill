@@ -68,6 +68,7 @@ function fold_adv(){
 }
 
 
+
 /* drag and drop */
 function allowDrop(ev) {
     ev.preventDefault();
