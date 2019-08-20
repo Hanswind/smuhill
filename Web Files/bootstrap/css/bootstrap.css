@@ -209,7 +209,7 @@
 .templete2-button{
   background-color: #f1f0f0;
   border-radius: 10px;
-  width: 50px;
+  width: 80px;
   height: 50px;
   display: inline-block;
   position: relative;
@@ -218,30 +218,7 @@
   padding-top: 15px;
   text-align: center;
 }
-.templete2-body{
-  border: solid 1px grey;
-  border-radius: 10px;
-  background-color: lavender;
-  width: 150px;
-  height:160px;
-  display: inline-block;
-}
 
-.templete2-text{
-  margin: 10px;
-  text-align: center;
-  border-radius: 10px;
-  width: 90%; 
-  background-color: #f1f0f0; 
-}
-.templete2-buttonbox{
-  border: solid 1px grey;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  bottom: 50px;
-  
-} 
 .uparrow{
   position: relative;
   top: -5px;
