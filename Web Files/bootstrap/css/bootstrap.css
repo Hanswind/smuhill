@@ -342,7 +342,7 @@
   width: 50px;
   height:86%;
   border-radius: 2px;
-  backgorund-color: #ffffff;
+  border-radius: 2px;
 }
 .templete_image img {
 
@@ -393,7 +393,6 @@
   position: relative;
   top: -63px;
   left: 27px;
-  background-color: #bbbbbb;
 }
 .templete_adv:hover .templete_dis {
   width: calc(90% - 85px);
@@ -430,7 +429,11 @@
   top:-25px;
 }
 
-
+.templete_priview:hover {
+  color: black;
+  opacity: 1;
+  background-color:rgb(255,192,0);
+}
 
 
 

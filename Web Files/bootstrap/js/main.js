@@ -60,7 +60,7 @@ function fold_adv(){
         $("#fold4").css("display", "inline")
     }
     else{
-        $("#adv_template").animate({height:410});
+        $("#adv_template").animate({height:330});
         $("#adv_elements").attr("value", "open")
         $("#fold3").css("display", "inline")
         $("#fold4").css("display", "none")
