@@ -32,24 +32,60 @@
 .section1 {
   float:left;
   margin: 0;
-  background-color: #ffffff;
+  background-color: #eeeeee;
   border:1px solid #dddddd;
   width:300px;
   height:100%;
   overflow:hidden;
 }
+.selection {
+  position: absolute;
+  top:65px;
+  left: -2px;
+  height:55px;
+  width: 292px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+}
+.select_element {
+  display: inline-block;
+  border: 1px solid #000;
+  position:relative;
+  top: 5px;
+  height:90%;
+  width:32%;
+  border-radius:5px;
+  padding-top:6px;
+  font-size: 18px;
+  background-color: rgba(255,192,0, 0.2);
+  transition-duration: 0.5s;
+}
+#s_all {
+  top:0px;
+  font-weight: bold;
+  background-color: rgb(255,192,0);
+}
+.section1_main {
+
+  position: relative;
+  top: 50px;
+}
 .elements_section {
-  top:150px;
-  border: 1px solid black;
+  border-top: 1px solid #bbb;
+  top:100px;
+
   background-color: #ffffff;
   overflow-x: hidden;
   overflow-y: scroll;
-  position:sticky;
+  position: relative;
   text-align: center;
-
   margin:3px;
-  height: 82%
+  height: 750px;
 }
+
 
 .madang {
   text-align: center;
@@ -487,7 +523,8 @@
   padding-top : 20px;
   padding-bottom: 20px;
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px solid #999999;
+  background-color: #fff;
 }
 #alert_m > templete_name {
   text-align: center;

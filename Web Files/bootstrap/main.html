@@ -38,7 +38,14 @@
 
     <section class="wrapper"><!--반응형 웹 구조-->
         <div class="section1">
-            <div class="elements_section">
+
+            <div class="section1_main">
+                <div class="selection">
+                    <div class="select_element" id="s_all" onclick="select(1)" value="s">전체</div>
+                    <div class="select_element" id="s_bas" onclick="select(2)" value="c">기본</div>
+                    <div class="select_element" id="s_down" onclick="select(3)" value="c">다운로드</div>
+                </div>
+                <div class="elements_section" id="basic">
                             <div id="normal_elements" onclick="fold_normal()" value="open">
                                 <div class="fold_normal" id="fold1"></div>
                                 <div class="fold_normal2" id="fold2"></div>
@@ -115,10 +122,8 @@
                             </div>
 
                             <a href="#"><div class="madang">창작마당</div></a>
-
-
             </div>
-
+            </div>
         </div> <!-- 좌측에 블럭들 위치해있는 section-->
         <div class="section2">
             <div class="section2_1"></div>  <!-- 중하에 시각적 블럭 영역 svg section-->
