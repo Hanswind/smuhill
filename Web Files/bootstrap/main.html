@@ -127,7 +127,15 @@
         </div> <!-- 좌측에 블럭들 위치해있는 section-->
         <div class="section2">
             <div class="section2_1"></div>  <!-- 중하에 시각적 블럭 영역 svg section-->
-            <div class="chatbot_Flow">
+            <div class="main"> <!-- content 영역 -->
+                <div class="main_dis"></div> <!-- 챗봇 기본정보 -->
+                <div class="main_flow"> <!-- 챗봇 플로우차트 공간 -->
+                    <div class="zoom"><!-- 플로우차트 줌인줌아웃 -->
+                        <div id="zoomin" onclick="zoomin()">+</div>
+                        <div id="zoomout" onclick="zoomout()">-</div>
+
+                    </div>
+                        <div class="chatbot_Flow">
 
                 <div class="svg-chart" id="svg-chart"  xmlns="http://www.w3.org/2000/svg" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <div class="svg-foreign">
@@ -141,6 +149,8 @@
                     </div>
                 </div>
             </div> <!-- 중상에 선택한 요소 조작 section-->
+                </div>
+            </div>
         </div>
         <div class="section3" id="right_section"><!-- 웇흑에 미리보기 section-->
             <input type="button" class="fold_layout" id="fold_button" onclick="fold_layout()" value=">>" >

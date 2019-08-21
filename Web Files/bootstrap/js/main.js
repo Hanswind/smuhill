@@ -80,8 +80,19 @@ function _select_(id) {
     }
 }
 
-
-
+/* 플로우차트 줌인아웃 */
+function zoomin(){
+    var zoom = $(".chatbot_Flow").css("zoom")*1.1;
+    if(zoom < 2.45) {
+        $(".chatbot_Flow").css("zoom", zoom * 1.1)
+    }
+}
+function zoomout(){
+    var zoom = $(".chatbot_Flow").css("zoom");
+    if(zoom > 0.55){
+        $(".chatbot_Flow").css("zoom", zoom * 0.9)
+    }
+}
 
 /* 기본요소 접기 */
 function fold_normal(){

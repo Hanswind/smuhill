@@ -150,20 +150,51 @@
 .message:hover {
     background-color:#2b669a;
 }
+
+.main {
+  position:relative;
+  top:50px;
+  background-color: lavender;
+  height:100%;
+}
+.main_dis {
+  position:relative;
+  top:0px;
+  background-color: #999;
+  height: 100px;
+}
+.main_flow {
+  padding-top:1%;
+}
+.zoom {
+  position:relative;
+  width:58px;
+  height:23px;
+  top:0px;
+  left:2%;
+
+}
+.zoom > div {
+  display: inline-block;
+  position:relative;
+  text-align: center;
+  width:27px;
+  height:23px;
+  background-color:skyblue;
+}
 .chatbot_Flow {
-  margin-top: 150px;
   display : block;
   border: 1px solid #dddddd;
   overflow: hidden;
-  height: 80%;
+  height: 77%;
   background-color: #ffffff;
   overflow-x: scroll;
   overflow-y:scroll;
-  position:sticky;
+  position:absolute;
   background-image: url("./images/bg.jpg");
   background-repeat: repeat;
   width: 96%;
-
+  zoom: 100%;
   margin-left:2%;
   margin-right:2%;
 }
