@@ -40,89 +40,91 @@
         <div class="section1">
 
             <div class="section1_main">
-                <div class="selection">
-                    <div class="select_element" id="s_all" onclick="select(1)" value="s">전체</div>
-                    <div class="select_element" id="s_bas" onclick="select(2)" value="c">기본</div>
-                    <div class="select_element" id="s_down" onclick="select(3)" value="c">다운로드</div>
+                <div class="elements">
+                    <div class="selection">
+                        <div class="select_element" id="s_all" onclick="select(1)" value="s">전체</div>
+                        <div class="select_element" id="s_bas" onclick="select(2)" value="c">기본</div>
+                        <div class="select_element" id="s_down" onclick="select(3)" value="c">다운로드</div>
+                    </div>
+                    <div class="elements_section" id="basic">
+                                <div id="normal_elements" onclick="fold_normal()" value="open">
+                                    <div class="fold_normal" id="fold1"></div>
+                                    <div class="fold_normal2" id="fold2"></div>
+
+                                    <p style="display: inline">&nbsp;&nbsp;기본 요소&nbsp;&nbsp;</p><br>
+                                </div>
+                                <div id="template">
+                                    <br>
+                                    <div class="templete templete1" id="text" xmlns="http://www.w3.org/1999/xhtml">
+                                        <div class = "icon"><p>___________<br>___________</p></div>
+                                        <p style="font-size:16px; padding-top:2px;">텍스트</p>
+                                    </div>
+                                    <div class="templete templete2" id="list" xmlns="http://www.w3.org/1999/xhtml">
+                                        <div class = "icon">
+                                            <p style="margin: 0 0 3px; padding-top: 5px;">___________</p>
+                                            <div class = "list_ex" id="ex_1"></div>
+                                            <div class = "list_ex" id="ex_2"></div>
+                                            <div class = "list_ex" id="ex_3"></div>
+                                        </div>
+
+                                        <p style="font-size:16px; padding-top:2px;">리스트</div>
+                                    <div class="templete templete3" id="image" xmlns="http://www.w3.org/1999/xhtml">
+                                        <div class = "icon" id="photo">
+                                            <div id="mountain"></div>
+                                            <div id="sun"></div>
+                                        </div><p style="font-size:16px; padding-top:2px;">이미지</p></div>
+
+                                    <div class="templete templete4" id="video" xmlns="http://www.w3.org/1999/xhtml">
+                                        <div class = "icon" >
+                                            <div id="video_back"></div>
+                                            <div id="start"></div>
+                                        </div>
+                                        <p style="font-size:16px; padding-top:2px;">동영상</p></div>
+                                    <div class="templete templete5" id="sound"xmlns="http://www.w3.org/1999/xhtml">
+                                        <div class="icon"><div id="speaker"><p>)</p><p>)</p></div></div>
+                                        <p style="font-size:16px; padding-top:2px;">음성</p>
+                                    </div>
+                                    <div class="templete templete6" id="file"xmlns="http://www.w3.org/1999/xhtml">
+                                        <div class="icon">
+                                            <div id="file_i"></div>
+                                            <div id="infile" style="font-size:2px;">----</div>
+                                        </div>
+                                        <p style="font-size:16px; padding-top:2px;">파일</p>
+                                    </div>
+                                    <br><br>
+                                </div>
+                                <div id="adv_elements" onclick="fold_adv()" value="open">
+                                    <div class="fold_normal" id="fold3"></div>
+                                    <div class="fold_normal2" id="fold4"></div>
+                                    <p style="display: inline">고급 요소&nbsp;&nbsp;&nbsp;</p>
+                                </div>
+                                <div id ="adv_template">
+                                    <br>
+
+                                    <div class="templete_adv" id="alert_m">
+                                        <div class="templete_image"><img src="./css/images/alarms.svg"><div class="templete_priview"><p>미리보기</p></div></div>
+                                        <div class="templete_name"><p style="font-weight:800">알람메세지</p></div>
+                                        <div class="templete_dis"><p>특정시간에 챗봇 사용자들에게 원하는 메세지를 알람으로 보낼수 있다.</p></div>
+                                    </div>
+                                    <div class="templete_adv" id="booking">
+                                        <div class="templete_image"><img scr="#"><div class="templete_priview"><p>미리보기</p></div></div>
+                                        <div class="templete_name"><p style="font-weight:800">예약 Form</p></div>
+                                        <div class="templete_dis">수요조사, 공동구매등에 사용가능한 예약 기능</div>
+                                    </div>
+                                    <div class="templete_adv" id="vote">
+                                        <div class="templete_image"><img scr="#"><div class="templete_priview"><p>미리보기</p></div></div>
+                                        <div class="templete_name"><p style="font-weight:800">투표 Form</p></div>
+                                        <div class="templete_dis">투표에 사용가능한 기능</div>
+                                    </div>
+                                    <br><br>
+                                </div>
+                                <div id="download_elements">
+                                    <p style="display: inline">다운로드한 요소</p>
+                                </div>
+
+                                <a href="#"><div class="madang">창작마당</div></a>
                 </div>
-                <div class="elements_section" id="basic">
-                            <div id="normal_elements" onclick="fold_normal()" value="open">
-                                <div class="fold_normal" id="fold1"></div>
-                                <div class="fold_normal2" id="fold2"></div>
-
-                                <p style="display: inline">&nbsp;&nbsp;기본 요소&nbsp;&nbsp;</p><br>
-                            </div>
-                            <div id="template">
-                                <br>
-                                <div class="templete templete1" id="text" xmlns="http://www.w3.org/1999/xhtml">
-                                    <div class = "icon"><p>___________<br>___________</p></div>
-                                    <p style="font-size:16px; padding-top:2px;">텍스트</p>
-                                </div>
-                                <div class="templete templete2" id="list" xmlns="http://www.w3.org/1999/xhtml">
-                                    <div class = "icon">
-                                        <p style="margin: 0 0 3px; padding-top: 5px;">___________</p>
-                                        <div class = "list_ex" id="ex_1"></div>
-                                        <div class = "list_ex" id="ex_2"></div>
-                                        <div class = "list_ex" id="ex_3"></div>
-                                    </div>
-
-                                    <p style="font-size:16px; padding-top:2px;">리스트</div>
-                                <div class="templete templete3" id="image" xmlns="http://www.w3.org/1999/xhtml">
-                                    <div class = "icon" id="photo">
-                                        <div id="mountain"></div>
-                                        <div id="sun"></div>
-                                    </div><p style="font-size:16px; padding-top:2px;">이미지</p></div>
-
-                                <div class="templete templete4" id="video" xmlns="http://www.w3.org/1999/xhtml">
-                                    <div class = "icon" >
-                                        <div id="video_back"></div>
-                                        <div id="start"></div>
-                                    </div>
-                                    <p style="font-size:16px; padding-top:2px;">동영상</p></div>
-                                <div class="templete templete5" id="sound"xmlns="http://www.w3.org/1999/xhtml">
-                                    <div class="icon"><div id="speaker"><p>)</p><p>)</p></div></div>
-                                    <p style="font-size:16px; padding-top:2px;">음성</p>
-                                </div>
-                                <div class="templete templete6" id="file"xmlns="http://www.w3.org/1999/xhtml">
-                                    <div class="icon">
-                                        <div id="file_i"></div>
-                                        <div id="infile" style="font-size:2px;">----</div>
-                                    </div>
-                                    <p style="font-size:16px; padding-top:2px;">파일</p>
-                                </div>
-                                <br><br>
-                            </div>
-                            <div id="adv_elements" onclick="fold_adv()" value="open">
-                                <div class="fold_normal" id="fold3"></div>
-                                <div class="fold_normal2" id="fold4"></div>
-                                <p style="display: inline">고급 요소&nbsp;&nbsp;&nbsp;</p>
-                            </div>
-                            <div id ="adv_template">
-                                <br>
-
-                                <div class="templete_adv" id="alert_m">
-                                    <div class="templete_image"><img src="./css/images/alarms.svg"><div class="templete_priview"><p>미리보기</p></div></div>
-                                    <div class="templete_name"><p style="font-weight:800">알람메세지</p></div>
-                                    <div class="templete_dis"><p>특정시간에 챗봇 사용자들에게 원하는 메세지를 알람으로 보낼수 있다.</p></div>
-                                </div>
-                                <div class="templete_adv" id="booking">
-                                    <div class="templete_image"><img scr="#"><div class="templete_priview"><p>미리보기</p></div></div>
-                                    <div class="templete_name"><p style="font-weight:800">예약 Form</p></div>
-                                    <div class="templete_dis">수요조사, 공동구매등에 사용가능한 예약 기능</div>
-                                </div>
-                                <div class="templete_adv" id="vote">
-                                    <div class="templete_image"><img scr="#"><div class="templete_priview"><p>미리보기</p></div></div>
-                                    <div class="templete_name"><p style="font-weight:800">투표 Form</p></div>
-                                    <div class="templete_dis">투표에 사용가능한 기능</div>
-                                </div>
-                                <br><br>
-                            </div>
-                            <div id="download_elements">
-                                <p style="display: inline">다운로드한 요소</p>
-                            </div>
-
-                            <a href="#"><div class="madang">창작마당</div></a>
-            </div>
+                </div>
             </div>
         </div> <!-- 좌측에 블럭들 위치해있는 section-->
         <div class="section2">

@@ -40,7 +40,7 @@
 }
 .selection {
   position: absolute;
-  top:65px;
+  top:7px;
   left: -2px;
   height:55px;
   width: 292px;
@@ -49,6 +49,11 @@
   border-radius: 8px;
   background-color: #fff;
   text-align: center;
+}
+.elements {
+  position:relative;
+  height:870px;
+
 }
 .select_element {
   display: inline-block;
@@ -63,6 +68,7 @@
   background-color: rgba(255,192,0, 0.2);
   transition-duration: 0.5s;
 }
+
 #s_all {
   top:0px;
   font-weight: bold;
@@ -75,7 +81,7 @@
 }
 .elements_section {
   border-top: 1px solid #bbb;
-  top:100px;
+  top:45px;
 
   background-color: #ffffff;
   overflow-x: hidden;
@@ -83,7 +89,8 @@
   position: relative;
   text-align: center;
   margin:3px;
-  height: 750px;
+  height: auto;
+  max-height: 95%
 }
 
 
