@@ -7,6 +7,7 @@ function fold_layout(){
         $(function(){
             $("#right_section").animate({width:20});
             $("#fold_button").animate({right:0});
+            $(".section3_tag").hide();
 
             if (matchMedia("screen and (min-width:768px)").matches) {
                 var nextWidth = $(".section2").width()+350;
@@ -23,6 +24,7 @@ function fold_layout(){
         $(function(){
             $("#right_section").animate({width:400});
             $("#fold_button").animate({right:350});
+            $(".section3_tag").show();
             if (matchMedia("screen and (min-width:768px)").matches) {
                 var nextWidth = $(".section2").width()-350;
                 $(".section2").animate({
