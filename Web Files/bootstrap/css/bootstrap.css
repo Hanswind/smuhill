@@ -322,8 +322,41 @@
   margin: 0px 60px;
   position: absolute;
 }
+/* main_dis 내용 */
+.main_dis > div{
+  display: inline-block;
+}
+.main_dis h2 {
 
+  margin : 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 9px;
+}
 
+.info_button {
+  font-size:15px;
+  float: right;
+  position: relative;
+  margin: 9px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+.more_button {
+  right:119px;
+}
+.save_button {
+  right:-77px;
+  background-color: rgb(181,230,29);
+}
+
+.save_button:hover {
+  background-color: rgb(34,177,76)
+}
 /* 반응형 레이아웃 */
 @media screen and (max-width: 768px){   /*전체 창크기 750px 이하이면 sec1, 3숨기고 2를 100%로로 */
   .section1{
