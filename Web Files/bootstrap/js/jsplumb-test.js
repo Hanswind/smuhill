@@ -1,13 +1,15 @@
 var numberOfTemplete1=0;
 var numberOfTemplete2=0;
+var numberOfTemplete3=0;
 jsPlumb.ready(function () {
     jsPlumb.draggable($(".templete2_1"));
     $("#templete2_1").click(function(){
         var $element=$('<div class="templete2-button" id="templete2_">text</div>');
-        $element.insertAfter($(".templete2-head"));
+        $element.prependTo($(".templete2-box"));
 
     });
 
+    jsPlumb.draggable($(".img"));
     var instance = jsPlumb.getInstance({
         DragOptions: { cursor: 'pointer' },
         PaintStyle: { stroke: '#666' },
@@ -20,6 +22,7 @@ jsPlumb.ready(function () {
         MaxConnections: 1,
         ConnectionsDetachable: false,
     });
+    
 
     instance.batch(function () {
         var color1 = "#ff0000";
@@ -60,19 +63,69 @@ jsPlumb.ready(function () {
         $(".templete2").click(function(){
             addTemplete2();
         });
+        $(".templete3").click(function(){
+            addTemplete3();
+        });
 
         function addTemplete1(id){
             if(typeof id==="undefined"){
                 numberOfTemplete1++;
                 id="templete1_"+numberOfTemplete1;
             }
-            var $element=$('<div class="templete1-body window" id="'+id+'"><div class="templete1-uparrow">&#8593</div><div class="templete1-text" >text'+numberOfTemplete1+'</div><div class="templete1-downarrow" id="source">&#8595</div></div>');
+            var $element=$('<div class="templete1-body window" id="'+id+'" draggable="true"><div class="templete1-uparrow">&#8593</div><div class="templete1-text" >text'+numberOfTemplete1+'</div><div class="templete1-downarrow" id="source">&#8595</div></div>');
             $(".svg-foreign").append($element);
+            jsPlumb.draggable($("#"+id));
             jsPlumb.addEndpoint($("#"+id),{anchor:"TopCenter"},exampleEndpoint1);
             jsPlumb.addEndpoint($("#"+id),{anchor:"BottomCenter"},exampleEndpoint2);
+        };
+        function addTemplete2(id){
+            if(typeof id==="undefined"){
+                numberOfTemplete2++;
+                id="templete2_"+numberOfTemplete2;
+            }
+            var $element=$('<div class="templete2_1" id+"'+id+'"><div class="templete2-head">list'+numberOfTemplete2+'</div><div class="templete2-box"><div class="templete2-button" id="templete2_1">+</div></div></div>');
+            $(".svg-foreign").append($element);
             jsPlumb.draggable($("#"+id));
+            jsPlumb.addEndpoint($("#"+id),{anchor:"TopCenter"},exampleEndpoint1);
+            jsPlumb.addEndpoint($("#"+id),{anchor:"BottomCenter"},exampleEndpoint2);
+        };
+        function addTemplete3(id) {
+            if (typeof id === "undefined") {
+                numberOfTemplete3++;
+                id = "templete3_" + numberOfTemplete3;
+            }
+            var $element = $('<div class="img" id="' + id + '"><div class="img-head">img'+numberOfTemplete3+'</div><div class="upload-button img-button"><img class="profile-pic" src="file://null"/></div><input class="file-upload" type="file" accept="image/*"/></div>');
+            $(".svg-foreign").append($element);
+            jsPlumb.draggable($("#" + id));
+            jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
+            jsPlumb.addEndpoint($("#" + id), { anchor: "BottomCenter" }, exampleEndpoint2);
+            /*이미지업로드*/
+            $(document).ready(function () {
+                var readURL = function (input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            $('.profile-pic').attr('src', e.target.result);
+                            $('.profile-pic').css("display", "inline-block");
+                        }
+
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+
+
+                $(".file-upload").on('change', function () {
+                    readURL(this);
+                });
+
+                $(".upload-button").on('click', function () {
+                    $(".file-upload").click();
+                });
+            });
         };
     });
+    
     
     jsPlumb.fire("jsPlumbDemoLoaded", instance);
     

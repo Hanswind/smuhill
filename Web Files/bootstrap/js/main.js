@@ -1,6 +1,5 @@
 
 
-
 /* 오른쪽 레이아웃 접기*/
 function fold_layout(){
     if(document.getElementById("fold_button").value == ">>"){
@@ -79,6 +78,30 @@ function _select_(id) {
         $(id).css("background-color", "rgba(255,192,0,0.2)");
     }
 }
+/*section3 태그*/
+const attrBtn=document.querySelector(".section3-attribute");
+const prevBtn=document.querySelector(".section3-preview");
+const attrWindow=document.querySelector(".attribute");
+const prevWindow=document.querySelector(".preview");
+
+function openAttr(){
+    if(prevBtn.classList.contains("section3-clicked")){
+        prevBtn.classList.remove("section3-clicked");
+    }
+    attrWindow.style.display="inline-block";
+    prevWindow.style.display="none";
+    attrBtn.classList.add("section3-clicked");
+}
+function openPrev(){
+    if(attrBtn.classList.contains("section3-clicked")){
+        attrBtn.classList.remove("section3-clicked");
+    }
+    attrWindow.style.display="none";
+    prevWindow.style.display="inline-block";
+    prevBtn.classList.add("section3-clicked");  
+}
+attrBtn.addEventListener("click",openAttr);
+prevBtn.addEventListener("click",openPrev);
 
 /* 플로우차트 줌인아웃 */
 function zoomin(){
