@@ -162,18 +162,6 @@ function fold_adv(){
 
 
 /* drag and drop */
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("templete1-body", ev.target.class);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("templete1-body");
-    ev.target.appendChild(document.getElementById(data));
-}
-
-
+const templete1=document.querySelector(".templete1");
+const chart=document.querySelector(".chatbot_Flow");
+console.log(chart);

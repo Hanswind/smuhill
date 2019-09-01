@@ -24,7 +24,9 @@
   margin:10px;
 }
 
-
+.jtk-connector{
+  z-index: 0;
+}
 /* 레이아웃 */
 .wrapper{
   height: 100%;
@@ -285,6 +287,7 @@
   border-radius: 10px;
   display: inline-block;
   position: absolute;
+  z-index: 1;;
 }
 .templete1-text{
   background-color: #f1f0f0;
@@ -292,7 +295,7 @@
   width: 70%;
   display: block;
   position: relative;
-  margin: 0px 0px 0px 20px;  
+  margin: 20px 0px 0px 20px;  
 }
 .templete1-uparrow{
   border-radius: 70px;
@@ -347,6 +350,7 @@
   display: inline-table;
   position: absolute;
   padding: 15px 15px 20px 15px;
+  z-index: 1;
 }
 .img-head{
   background-color: #f1f0f0;
