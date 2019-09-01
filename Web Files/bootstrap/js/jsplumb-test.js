@@ -61,36 +61,30 @@ jsPlumb.ready(function () {
         $(".templete3").click(function(){
             addTemplete3();
         });
+
+        /*drag and drop*/
         var dragged;
         const chart=document.querySelector(".chatbot_Flow");
         const templete1=document.querySelector(".templete1");
         const templete2=document.querySelector(".templete2");
         const templete3=document.querySelector(".templete3");
         templete1.addEventListener("dragstart",function(event){
-            console.log("start");
             dragged=event.target.id;
-            console.log(dragged);
         });
         templete2.addEventListener("dragstart",function(event){
             console.log("start");
             dragged=event.target.id;
-            console.log(dragged);
         });
         templete3.addEventListener("dragstart",function(event){
-            console.log("start");
             dragged=event.target.id;
-            console.log(dragged);
         });
         chart.addEventListener("dragover",function(event){
             event.preventDefault(); 
-            console.log("over");
         });
         chart.addEventListener("dragenter",function(){
-            console.log("enter");
         })
         chart.addEventListener("drop",function(event){
             event.preventDefault();
-            console.log(dragged);
             if(dragged==="text"){
                 addTemplete1();
             }else if(dragged==="list"){
