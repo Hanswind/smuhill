@@ -94,12 +94,12 @@ jsPlumb.ready(function () {
             }
         });
 
-        function addTemplete1(id){
+        function addTemplete1(id){  //텍스트 div
             if(typeof id==="undefined"){
                 numberOfTemplete1++;
                 id="templete1_"+numberOfTemplete1;
             }
-            var $element=$('<div class="templete1-body window" id="'+id+'" draggable="true"><div class="templete1-text" >text'+numberOfTemplete1+'</div></div>');
+            var $element=$('<div class="templete1-body window" id="'+id+'" draggable="true"><input type="text"></div>');
             $(".svg-foreign").append($element);
             jsPlumb.draggable($("#"+id));
             jsPlumb.addEndpoint($("#"+id),{anchor:"TopCenter"},exampleEndpoint1);

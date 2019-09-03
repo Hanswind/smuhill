@@ -258,19 +258,23 @@
 .entry{
   width: 70px;
   height: 70px;
-  background-color: grey;
+  background-color: #383838;
   display:inline-block;
   border-radius: 50px;
-  color: black;
-  padding: 20px;
+  color: white;
+  padding: 22px;
   text-align: center;
   position: absolute;
   left: 300px;
   border: solid 1px grey;
 }
+.entry:hover {
+  box-shadow: 1px 1px 5px #666666;
+  z-index:5;
+}
 .entry-body{
-  background-color: lavender;
   text-align: center;
+  font-size:17px;
   width: 140%;
   position: relative;
   border-radius: 60px;
@@ -287,12 +291,12 @@
   border-radius: 10px;
   display: inline-block;
   position: absolute;
-  z-index: 1;;
+  z-index: 1;
 }
-.templete1-text{
+.templete1-body > input{
   background-color: #f1f0f0;
   border-radius: 10px;
-  width: 70%;
+  width: 90px;
   display: block;
   position: relative;
   margin: 20px 0px 0px 20px;  
