@@ -1,39 +1,39 @@
 
 
 /* 오른쪽 레이아웃 접기*/
-function fold_layout(){
-    if(document.getElementById("fold_button").value == ">>"){
-        document.getElementById("fold_button").value='<<';
-        $(function(){
-            $("#right_section").animate({width:20});
-            $("#fold_button").animate({right:0});
+function fold_layout() {
+    if (document.getElementById("fold_button").value == ">>") {
+        document.getElementById("fold_button").value = '<<';
+        $(function () {
+            $("#right_section").animate({ width: 20 });
+            $("#fold_button").animate({ right: 0 });
             $(".section3_tag").hide();
 
             if (matchMedia("screen and (min-width:768px)").matches) {
-                var nextWidth = $(".section2").width()+350;
+                var nextWidth = $(".section2").width() + 350;
                 $(".section2").animate({
-                    width:nextWidth
-                }, { complete:function(){ $(".section2").width("calc(100% - 350px)"); } });
+                    width: nextWidth
+                }, { complete: function () { $(".section2").width("calc(100% - 350px)"); } });
             }
-            else{}
+            else { }
         });
     }
 
-    else if(document.getElementById("fold_button").value == "<<"){
-        document.getElementById("fold_button").value=">>";
-        $(function(){
-            $("#right_section").animate({width:400});
-            $("#fold_button").animate({right:350});
+    else if (document.getElementById("fold_button").value == "<<") {
+        document.getElementById("fold_button").value = ">>";
+        $(function () {
+            $("#right_section").animate({ width: 400 });
+            $("#fold_button").animate({ right: 350 });
             $(".section3_tag").show();
             if (matchMedia("screen and (min-width:768px)").matches) {
-                var nextWidth = $(".section2").width()-350;
+                var nextWidth = $(".section2").width() - 350;
                 $(".section2").animate({
-                    width:nextWidth
-                }, { complete:function(){ $(".section2").width("calc(100% - 700px)"); } });
+                    width: nextWidth
+                }, { complete: function () { $(".section2").width("calc(100% - 700px)"); } });
             }
         });
     }
-    else{}
+    else { }
 }
 /* 요소 선택 */
 
@@ -81,56 +81,56 @@ function _select_(id) {
     }
 }
 /*section3 태그*/
-const attrBtn=document.querySelector(".section3-attribute");
-const prevBtn=document.querySelector(".section3-preview");
-const attrWindow=document.querySelector(".attribute");
-const prevWindow=document.querySelector(".preview");
+const attrBtn = document.querySelector(".section3-attribute");
+const prevBtn = document.querySelector(".section3-preview");
+const attrWindow = document.querySelector(".attribute");
+const prevWindow = document.querySelector(".preview");
 
-function openAttr(){
-    if(prevBtn.classList.contains("section3-clicked")){
+function openAttr() {
+    if (prevBtn.classList.contains("section3-clicked")) {
         prevBtn.classList.remove("section3-clicked");
     }
-    attrWindow.style.display="inline-block";
-    prevWindow.style.display="none";
+    attrWindow.style.display = "inline-block";
+    prevWindow.style.display = "none";
     attrBtn.classList.add("section3-clicked");
 }
-function openPrev(){
-    if(attrBtn.classList.contains("section3-clicked")){
+function openPrev() {
+    if (attrBtn.classList.contains("section3-clicked")) {
         attrBtn.classList.remove("section3-clicked");
     }
-    attrWindow.style.display="none";
-    prevWindow.style.display="inline-block";
-    prevBtn.classList.add("section3-clicked");  
+    attrWindow.style.display = "none";
+    prevWindow.style.display = "inline-block";
+    prevBtn.classList.add("section3-clicked");
 }
-attrBtn.addEventListener("click",openAttr);
-prevBtn.addEventListener("click",openPrev);
+attrBtn.addEventListener("click", openAttr);
+prevBtn.addEventListener("click", openPrev);
 
 /* 플로우차트 줌인아웃 */
-function zoomin(){
-    var zoom = $(".chatbot_Flow").css("zoom")*1.1;
-    if(zoom < 2.45) {
+function zoomin() {
+    var zoom = $(".chatbot_Flow").css("zoom") * 1.1;
+    if (zoom < 2.45) {
         $(".chatbot_Flow").css("zoom", zoom * 1.1)
     }
 }
-function zoomout(){
+function zoomout() {
     var zoom = $(".chatbot_Flow").css("zoom");
-    if(zoom > 0.55){
+    if (zoom > 0.55) {
         $(".chatbot_Flow").css("zoom", zoom * 0.9)
     }
 }
 
 /* 기본요소 접기 */
-function fold_normal(){
-    if($("#normal_elements").attr("value") == "open"){
-        $("#template").animate({height:0});
+function fold_normal() {
+    if ($("#normal_elements").attr("value") == "open") {
+        $("#template").animate({ height: 0 });
         $("#normal_elements").attr("value", "close");
         $("#fold1").css("display", "none");
         $("#fold2").css("display", "inline");
         $("#normal_elements").css("background-color", "#dddddd");
         $("#normal_elements").css("color", "#999");
     }
-    else{
-        $("#template").animate({height:430});
+    else {
+        $("#template").animate({ height: 430 });
         $("#normal_elements").attr("value", "open")
         $("#fold1").css("display", "inline")
         $("#fold2").css("display", "none")
@@ -140,17 +140,17 @@ function fold_normal(){
 }
 
 /* 고급요소 접기 */
-function fold_adv(){
-    if($("#adv_elements").attr("value") == "open"){
-        $("#adv_template").animate({height:0});
+function fold_adv() {
+    if ($("#adv_elements").attr("value") == "open") {
+        $("#adv_template").animate({ height: 0 });
         $("#adv_elements").attr("value", "close")
         $("#fold3").css("display", "none")
         $("#fold4").css("display", "inline")
         $("#adv_elements").css("background-color", "#dddddd");
         $("#adv_elements").css("color", "#999");
     }
-    else{
-        $("#adv_template").animate({height:330});
+    else {
+        $("#adv_template").animate({ height: 330 });
         $("#adv_elements").attr("value", "open")
         $("#fold3").css("display", "inline")
         $("#fold4").css("display", "none")
@@ -160,8 +160,3 @@ function fold_adv(){
 }
 
 
-
-/* drag and drop */
-const templete1=document.querySelector(".templete1");
-const chart=document.querySelector(".chatbot_Flow");
-console.log(chart);
