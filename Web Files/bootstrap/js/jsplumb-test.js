@@ -132,7 +132,7 @@ jsPlumb.ready(function () {
                 var $element = $('<div class="templete2-button" id="' + id + '">text</div>');
                 $element.prependTo($(".templete2-box"));
                 jsPlumb.addEndpoint($("#" + id), { anchor: "BottomCenter" }, exampleEndpoint2)
-                jsPlumb.repaint($("#" + id));
+                jsPlumb.repaintEverything();
             }); 
            
         };
