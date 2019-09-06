@@ -6,6 +6,7 @@
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /*nav 프로필 영역 */
+
 .navbar-profile, .navbar-profile:visited, .navbar-profile:active{
   color: whitesmoke;
 }
@@ -270,7 +271,12 @@
 }
 .entry:hover {
   box-shadow: 1px 1px 5px #666666;
-  z-index:5;
+}
+.jtk-endpoint {     /* 연결용 원을 제일 위로 */
+  /*z-index: 4;*/
+}
+.svg-foreign > div:active { /* 요소 hover시 다른 요소들보다 위로 */
+  z-index: 5;
 }
 .entry-body{
   text-align: center;
@@ -283,23 +289,57 @@
 
 .templete1-body{
 
-  border: solid 1px grey;
-  background-color: lavender;
-  text-align: center;
-  width: 130px;
-  height: 70px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  width: auto;
+  min-width: 130px;
+  max-width: 220px;
+  min-height: 70px;
+  height: auto;
   border-radius: 10px;
   display: inline-block;
   position: absolute;
   z-index: 1;
 }
-.templete1-body > input{
-  background-color: #f1f0f0;
-  border-radius: 10px;
-  width: 90px;
-  display: block;
-  position: relative;
-  margin: 20px 0px 0px 20px;  
+.templete1-body:hover {
+  border: solid 1px rgb(255,192,0);
+  box-shadow: 1px 1px 1px lightgrey;
+}
+.templete1-body > .text_name {
+  height:28px;
+  border-bottom: 1px solid #aaa;
+  margin:2px;
+  overflow: hidden;
+}
+.name_content {
+  height:100%;
+  margin:1px;
+  margin-top: 2px;
+  color:rgb(255,192,0);
+  font-weight: bold;
+  padding: 4px;
+}
+.text_name > [contenteditable="true"]:focus {
+  outline: 0px;
+}
+.templete1-body > .text_content {
+  margin:5px;
+  background-color: #eeeeee;
+  font-size:10px;
+  min-height: 30px;
+
+}
+
+.text_content::placeholder {
+  color:#999;
+  opacity: 1;
+}
+.templete1-body > [contenteditable="true"]:empty:before {
+  content:attr(data-text);
+  color: #999;
+}
+.templete1-body > [contenteditable="true"]:focus {
+  outline: 1px solid rgb(255, 192, 0);
 }
 .templete1-uparrow{
   border-radius: 70px;
