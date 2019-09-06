@@ -113,8 +113,18 @@ jsPlumb.ready(function () {
             }
             var $element = $('<div class="templete2_1" id="' + id + '"><div class="templete2-head">list' + numberOfTemplete2 + '</div><div class="templete2-box"><div class="templete2-button" id="templete2-button">+</div></div></div>');
             $(".svg-foreign").append($element);
-            jsPlumb.draggable($("#" + id));
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
+            ($("#" + id)).draggable({
+                step: function () {
+                    jsPlumb.repaintEverything();
+                },
+                drag:function(){
+                    jsPlumb.repaintEverything();
+                },
+                stop:function(){
+                    jsPlumb.repaintEverything();
+                }
+            });
 
             $("#templete2-button").click(function () {
                 numberOfTemplete2Txt++;
@@ -122,10 +132,9 @@ jsPlumb.ready(function () {
                 var $element = $('<div class="templete2-button" id="' + id + '">text</div>');
                 $element.prependTo($(".templete2-box"));
                 jsPlumb.addEndpoint($("#" + id), { anchor: "BottomCenter" }, exampleEndpoint2)
-                console.log(jsPlumb.repaint(".templete2_1"));
-                jsPlumb.repaint(".templete2_1");
-
-            });
+                jsPlumb.repaint($("#" + id));
+            }); 
+           
         };
 
 
