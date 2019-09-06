@@ -19,26 +19,27 @@ jsPlumb.ready(function () {
 
 
     instance.batch(function () {
-        var color1 = "#ff0000";
+        var color1 = "#eee";
         var exampleEndpoint1 = {
-            endpoint: ["Dot", { radius: 11 }],
+            endpoint: ["Dot", { radius: 8 }],
             paintStyle: { fill: color1 },
             isSource: false,
             scope: "green",
-            connectorStyle: { stroke: color1, strokeWidth: 6 },
-            connector: ["Bezier", { curviness: 63 }],
+            connectorStyle: { stroke: color1, strokeWidth: 4 },
+            connector: ["Bezier", { curviness: 63 } ],
             maxConnections: 3,
             isTarget: true,
+
         };
-        var color2 = "#316b31";
+        var color2 = "rgb(255,192,0)";
         var exampleEndpoint2 = {
-            endpoint: ["Dot", { radius: 11 }],
+            endpoint: ["Dot", { radius: 8}],
             paintStyle: { fill: color2 },
             isSource: true,
             scope: "green",
-            connectorStyle: { stroke: color2, strokeWidth: 6 },
-            connector: ["Bezier", { curviness: 63 }],
-            maxConnections: 3,
+            connectorStyle: { stroke: color2, strokeWidth: 3 },
+            connector: ["Bezier", { curviness: 63 } ],
+            maxConnections: 1,
             isTarget: false,
         };
 
@@ -99,7 +100,7 @@ jsPlumb.ready(function () {
                 numberOfTemplete1++;
                 id = "templete1_" + numberOfTemplete1;
             }
-            var $element = $('<div class="templete1-body window" id="' + id + '" draggable="true"><input type="text"></div>');
+            var $element=$('<div class="templete1-body window" id="'+id+'" draggable="true"><div class="text_name"><div class="name_content"  contenteditable="true" onclick="$(this).focus();" max="15">텍스트'+numberOfTemplete1+'</div></div><div class="text_content" contenteditable="true" onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div></div>');
             $(".svg-foreign").append($element);
             jsPlumb.draggable($("#" + id));
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
