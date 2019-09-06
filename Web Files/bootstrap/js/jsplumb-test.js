@@ -13,7 +13,7 @@ jsPlumb.ready(function () {
         EndpointStyle: { width: 20, height: 16, stroke: '#666' },
         Endpoint: "Rectangle",
         Anchors: ["TopCenter", "TopCenter"],
-        Container: "svg-foreign",
+        Container: "parent",
         MaxConnections: 1,
         ConnectionsDetachable: false,
     });

@@ -375,6 +375,9 @@
   position: relative;
   text-align: center;
 }
+.templete2-box{
+  display:flex;
+}
 .templete2-button{
   background-color: #f1f0f0;
   border-radius: 10px;
