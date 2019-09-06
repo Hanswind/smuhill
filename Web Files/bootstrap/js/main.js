@@ -158,10 +158,3 @@ function fold_adv(){
         $("#adv_elements").css("color", "#000");
     }
 }
-
-
-
-/* drag and drop */
-const templete1=document.querySelector(".templete1");
-const chart=document.querySelector(".chatbot_Flow");
-console.log(chart);
