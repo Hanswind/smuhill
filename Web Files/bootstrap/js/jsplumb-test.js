@@ -1,5 +1,6 @@
 var numberOfTemplete1 = 0;
 var numberOfTemplete2 = 0;
+var numberOfTemplete2Btn=0;
 var numberOfTemplete2Txt = 0;
 var numberOfTemplete3 = 0;
 jsPlumb.ready(function () {
@@ -110,8 +111,10 @@ jsPlumb.ready(function () {
             if (typeof id === "undefined") {
                 numberOfTemplete2++;
                 id = "templete2_" + numberOfTemplete2;
+                numberOfTemplete2Btn++
+                BtnId="templete2Btn_"+numberOfTemplete2Btn;
             }
-            var $element = $('<div class="templete2_1" id="' + id + '"><div class="templete2-head">list' + numberOfTemplete2 + '</div><div class="templete2-box"><div class="templete2-button" id="templete2-button">+</div></div></div>');
+            var $element = $('<div class="templete2_1" id="' + id + '"><div class="templete2-head">list' + numberOfTemplete2 + '</div><div class="templete2-box"><div class="templete2-button" id="'+BtnId+'">+</div></div></div>');
             $(".svg-foreign").append($element);
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
             ($("#" + id)).draggable({
@@ -126,11 +129,11 @@ jsPlumb.ready(function () {
                 }
             });
 
-            $("#templete2-button").click(function () {
+            $(".templete2-button").click(function () {
                 numberOfTemplete2Txt++;
                 id = "templete2-text" + numberOfTemplete2Txt;
                 var $element = $('<div class="templete2-button" id="' + id + '">text</div>');
-                $element.prependTo($(".templete2-box"));
+                $element.prependTo($(this).parent());
                 jsPlumb.addEndpoint($("#" + id), { anchor: "BottomCenter" }, exampleEndpoint2)
                 jsPlumb.repaintEverything();
             }); 
