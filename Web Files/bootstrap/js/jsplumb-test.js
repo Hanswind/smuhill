@@ -114,7 +114,7 @@ jsPlumb.ready(function () {
                 numberOfTemplete2Btn++
                 BtnId="templete2Btn_"+numberOfTemplete2Btn;
             }
-            var $element = $('<div class="templete2_1" id="' + id + '"><div class="templete2-head">list' + numberOfTemplete2 + '</div><div class="templete2-box"><div class="templete2-button" id="'+BtnId+'">+</div></div></div>');
+            var $element = $('<div class="templete2_1" id="' + id + '"><div class="list_name"><div class="name_content" contenteditable="true" onclick="$(this).focus();">리스트' + numberOfTemplete2 + '</div></div><div class="text_content" contenteditable="true"  onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div><div class="templete2-box"><div class="templete2-button" id="'+BtnId+'">+</div></div></div>');
             $(".svg-foreign").append($element);
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
             ($("#" + id)).draggable({
