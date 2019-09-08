@@ -1,9 +1,11 @@
+var numberOfElements=1;
 var numberOfTemplete1 = 0;
 var numberOfTemplete2 = 0;
 var numberOfTemplete2Btn=0;
 var numberOfTemplete2Txt = 0;
 var numberOfTemplete3 = 0;
 jsPlumb.ready(function () {
+    
     jsPlumb.draggable($(".img"));
     var instance = jsPlumb.getInstance({
         DragOptions: { cursor: 'pointer' },
@@ -63,6 +65,9 @@ jsPlumb.ready(function () {
         $(".templete3").click(function () {
             addTemplete3();
         });
+        $('#saveButton').click(function(){
+            saveFlowchart();
+        });
 
         /*drag and drop*/
         var dragged;
@@ -98,10 +103,11 @@ jsPlumb.ready(function () {
 
         function addTemplete1(id) {  //텍스트 div
             if (typeof id === "undefined") {
+                numberOfElements++;
                 numberOfTemplete1++;
                 id = "templete1_" + numberOfTemplete1;
             }
-            var $element=$('<div class="templete1-body window" id="'+id+'" draggable="true"><div class="text_name"><div class="name_content"  contenteditable="true" onclick="$(this).focus();" max="15">텍스트'+numberOfTemplete1+'</div></div><div class="text_content" contenteditable="true" onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div></div>');
+            var $element=$('<div class=" templete1-body window" id="'+id+'" draggable="true"><div class="text_name"><div class="name_content"  contenteditable="true" onclick="$(this).focus();" max="15">텍스트'+numberOfTemplete1+'</div></div><div class="text_content" contenteditable="true" onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div></div>');
             $(".svg-foreign").append($element);
             jsPlumb.draggable($("#" + id));
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
@@ -109,12 +115,13 @@ jsPlumb.ready(function () {
         };
         function addTemplete2(id) {
             if (typeof id === "undefined") {
+                numberOfElements++;
                 numberOfTemplete2++;
                 id = "templete2_" + numberOfTemplete2;
                 numberOfTemplete2Btn++
                 BtnId="templete2Btn_"+numberOfTemplete2Btn;
             }
-            var $element = $('<div class="templete2_1" id="' + id + '"><div class="list_name"><div class="name_content" contenteditable="true" onclick="$(this).focus();">리스트' + numberOfTemplete2 + '</div></div><div class="text_content" contenteditable="true"  onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div><div class="templete2-box"><div class="templete2-button" id="'+BtnId+'">+</div></div></div>');
+            var $element = $('<div class="window templete2_1" id="' + id + '"><div class="list_name"><div class="name_content" contenteditable="true" onclick="$(this).focus();">리스트' + numberOfTemplete2 + '</div></div><div class="text_content" contenteditable="true"  onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div><div class="templete2-box"><div class="templete2-button" id="'+BtnId+'">+</div></div></div>');
             $(".svg-foreign").append($element);
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
             ($("#" + id)).draggable({
@@ -130,9 +137,10 @@ jsPlumb.ready(function () {
             });
 
             $(".templete2-button").click(function () {
+                numberOfElements++;
                 numberOfTemplete2Txt++;
                 id = "templete2-text" + numberOfTemplete2Txt;
-                var $element = $('<div class="templete2-button" id="' + id + '">text</div>');
+                var $element = $('<div class="window templete2-button" id="' + id + '">text</div>');
                 $element.prependTo($(this).parent());
                 jsPlumb.addEndpoint($("#" + id), { anchor: "BottomCenter" }, exampleEndpoint2)
                 jsPlumb.repaintEverything();
@@ -147,10 +155,11 @@ jsPlumb.ready(function () {
 
         function addTemplete3(id) {
             if (typeof id === "undefined") {
+                numberOfElements++;
                 numberOfTemplete3++;
                 id = "templete3_" + numberOfTemplete3;
             }
-            var $element = $('<div class="img" id="' + id + '"><div class="img-head">img' + numberOfTemplete3 + '</div><div class="upload-button img-button"><img class="profile-pic" src="file://null"/></div><input class="file-upload" type="file" accept="image/*"/></div>');
+            var $element = $('<div class="window img" id="' + id + '"><div class="img-head">img' + numberOfTemplete3 + '</div><div class="upload-button img-button"><img class="profile-pic" src="file://null"/></div><input class="file-upload" type="file" accept="image/*"/></div>');
             $(".svg-foreign").append($element);
             jsPlumb.draggable($("#" + id));
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
@@ -178,6 +187,37 @@ jsPlumb.ready(function () {
                 });
             });
         };
+        function saveFlowchart(){
+            var nodes = []
+            $(".window").each(function (idx, elem) {
+            var $elem = $(elem);
+            var endpoints = jsPlumb.getEndpoints($elem.attr('id'));
+            console.log('endpoints of '+$elem.attr('id'));
+            console.log(endpoints);
+                nodes.push({
+                    blockId: $elem.attr('id'),
+                    nodetype: $elem.attr('data-nodetype'),
+                    positionX: parseInt($elem.css("left"), 10),
+                    positionY: parseInt($elem.css("top"), 10)
+                });
+            });
+            var connections = [];
+            $.each(jsPlumb.getAllConnections(), function (idx, connection) {
+                connections.push({
+                    connectionId: connection.id,
+                    pageSourceId: connection.sourceId,
+                    pageTargetId: connection.targetId
+                });
+            });
+            var flowChart = {};
+            flowChart.nodes = nodes;
+            flowChart.connections = connections;
+            flowChart.numberOfElements = numberOfElements;
+            var flowChartJson = JSON.stringify(flowChart);
+            var connectionList = jsPlumb.getAllConnections();          
+            $('#textarea').val(flowChartJson);
+        }
+        
     });
 
 

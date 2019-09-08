@@ -183,7 +183,9 @@
                         <h2>이음대학교</h2>
                     </div>
                     <div class="more_button info_button">더보기</div>
-                    <div class="save_button info_button">저장</div>
+                    <!-- 저장 -->
+                    <input class="save_button info_button" type="submit" id="saveButton" value="저장"/>
+
 
 
                 </div>
@@ -199,7 +201,7 @@
 
                         <div class="svg-chart" id="svg-chart" xmlns="http://www.w3.org/2000/svg" ">
                     <div class=" svg-foreign">
-                            <div class="entry">
+                            <div class="entry window">
                                 <div class="entry-body">시작</div>
                             </div>
                         </div>
@@ -217,7 +219,7 @@
             <input type="button" class="fold_layout" id="fold_button" onclick="fold_layout()" value=">>">
             <div class="attribute">
                 <form>
-                    <input type="textarea"></input>
+                    <textarea id='textarea'></textarea>
                 </form>
             </div>
             <div class="preview"></div>
