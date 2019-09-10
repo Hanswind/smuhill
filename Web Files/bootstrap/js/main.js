@@ -159,4 +159,3 @@ function fold_adv() {
     }
 }
 
-

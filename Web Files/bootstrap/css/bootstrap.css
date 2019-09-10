@@ -287,6 +287,7 @@
   right: 5px;
 }
 
+
 .templete1-body{
 
   border: solid 1px #ccc;
@@ -299,8 +300,8 @@
   border-radius: 10px;
   display: inline-block;
   position: absolute;
-  z-index: 1;
 }
+
 .templete1-body:hover {
   border: solid 1px rgb(255,192,0);
   box-shadow: 1px 1px 1px lightgrey;
@@ -334,8 +335,9 @@
   color:#999;
   opacity: 1;
 }
-.templete1-body > [contenteditable="true"]:empty:before, .templete2_1 > [contenteditable="true"]:empty:before {
+.templete1-body > [contenteditable="true"]:empty:before, .templete2_1 > [contenteditable="true"]:empty:before, .templete2-box > [contenteditable="true"]:empty:before {
   content:attr(data-text);
+  font-size: 10px;
   color: #999;
 }
 .templete1-body > [contenteditable="true"]:focus {
@@ -359,6 +361,29 @@
   position: relative;
   bottom: -15px;
 }
+
+/* 리스트 */
+
+.templete2_1{
+  background-color: #fff;
+  border: solid 1px grey;
+  border-radius: 10px;
+  display: inline-table;
+  position: absolute;
+  width: 90px;
+  height: auto;
+
+  border-radius: 10px;
+  z-index: 0;
+}
+.templete2_1:hover {
+  border: solid 1px rgb(128,0,0);
+  box-shadow: 1px 1px 1px lightgrey;
+}
+.templete2_1 > [contenteditable="true"]:focus {
+  outline: 1px solid rgb(128,0,0);
+}
+
 .templete2_1 >.list_name {
   height: 28px;
   border-bottom: 1px solid #aaa;
@@ -366,25 +391,14 @@
   overflow: hidden;
   color: rgb(128,0,0);
 }
-.templete2_1{
-  background-color: #fff;
-  border: solid 1px grey;
-  border-radius: 10px;
-  display: inline-table;
-  position: absolute;
-
-  border: solid 1px grey;
-  background-color: #fff;
-  width: auto;
-  min-width: 130px;
-  height: auto;
-  border-radius: 10px;
-  display: inline-block;
-  position: absolute;
-  z-index: 1;
-}
+.templete2-box { padding: 2px; }
 .list_name > [contenteditable="true"]:focus {
   outline: 0px;
+}
+.templete2-box > [contenteditable="true"]:focus {
+  outline: 0px;
+  background-color: rgb(255,233,233);
+  box-shadow:  1px 1px 1px lightgrey;
 }
 .templete2-box{
   display:flex;
@@ -396,10 +410,23 @@
   height: 50px;
   display: inline-block;
   position: relative;
+  padding:14px;
   margin-top: 10px;
   margin: 2px;
-  padding-top: 15px;
+
   text-align: center;
+}
+.templete2-button:last-child {
+  background-color: #fff;
+  border: 2px dashed grey;
+  font-weight: bold;
+  color: #999;
+}
+.templete2-button:last-child:hover {
+  transition-duration: 0.5s;
+  border: 2px dashed rgb(128,0,0);
+  background-color:rgb(255,233,233);
+  color:rgb(128,0,0);
 }
 .img{
   background-color: lavender;

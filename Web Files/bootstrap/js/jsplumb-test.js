@@ -34,7 +34,7 @@ jsPlumb.ready(function () {
             isTarget: true,
 
         };
-        var color2 = "rgb(255,192,0)";
+        var color2 = "rgb(70,70,70)";
         var exampleEndpoint2 = {
             endpoint: ["Dot", { radius: 8}],
             paintStyle: { fill: color2 },
@@ -107,7 +107,7 @@ jsPlumb.ready(function () {
                 numberOfTemplete1++;
                 id = "templete1_" + numberOfTemplete1;
             }
-            var $element=$('<div class=" templete1-body window" id="'+id+'" draggable="true"><div class="text_name"><div class="name_content"  contenteditable="true" onclick="$(this).focus();" max="15">텍스트'+numberOfTemplete1+'</div></div><div class="text_content" contenteditable="true" onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div></div>');
+            var $element=$('<div class=" templete1-body window" id="'+id+'" draggable="true"><div class="text_name"><div class="name_content"  contenteditable="true" onclick="$(this).focus();" >텍스트'+numberOfTemplete1+'</div></div><div class="text_content" contenteditable="true" onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div></div>');
             $(".svg-foreign").append($element);
             jsPlumb.draggable($("#" + id));
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
@@ -140,7 +140,7 @@ jsPlumb.ready(function () {
                 numberOfElements++;
                 numberOfTemplete2Txt++;
                 id = "templete2-text" + numberOfTemplete2Txt;
-                var $element = $('<div class="window templete2-button" id="' + id + '">text</div>');
+                var $element = $('<div class="window templete2-button" id="' + id + '" contenteditable="true" onclick="$(this).focus();" data-text="버튼명작성"></div>');
                 $element.prependTo($(this).parent());
                 jsPlumb.addEndpoint($("#" + id), { anchor: "BottomCenter" }, exampleEndpoint2)
                 jsPlumb.repaintEverything();
@@ -225,5 +225,8 @@ jsPlumb.ready(function () {
 
 
     jsPlumb.fire("jsPlumbDemoLoaded", instance);
+
+
+
 
 });
