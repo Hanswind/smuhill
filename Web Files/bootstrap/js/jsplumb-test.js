@@ -194,11 +194,14 @@ jsPlumb.ready(function () {
             var endpoints = jsPlumb.getEndpoints($elem.attr('id'));
             console.log('endpoints of '+$elem.attr('id'));
             console.log(endpoints);
+            console.log("밑");
+            console.log($('#'+$elem.attr('id')+'> .text_content').html());    // 해당 요소의 value 값 불러오는 방법(div 기준으로 개행)
                 nodes.push({
                     blockId: $elem.attr('id'),
                     nodetype: $elem.attr('data-nodetype'),
                     positionX: parseInt($elem.css("left"), 10),
                     positionY: parseInt($elem.css("top"), 10)
+
                 });
             });
             var connections = [];
