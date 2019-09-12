@@ -107,7 +107,7 @@ jsPlumb.ready(function () {
                 numberOfTemplete1++;
                 id = "templete1_" + numberOfTemplete1;
             }
-            var $element=$('<div class=" templete1-body window" id="'+id+'" draggable="true"><div class="text_name"><div class="name_content"  contenteditable="true" onclick="$(this).focus();" >텍스트'+numberOfTemplete1+'</div></div><div class="text_content" contenteditable="true" onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div></div>');
+            var $element=$('<div class=" templete1-body window" id="'+id+'" draggable="true"><form action="./text" method="POST"><input type="submit" value="제출" /></form><div class="text_name"><div class="name_content"  contenteditable="true" onclick="$(this).focus();" >텍스트'+numberOfTemplete1+'</div></div><div class="text_content" contenteditable="true" onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div></div>');
             $(".svg-foreign").append($element);
             jsPlumb.draggable($("#" + id));
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
