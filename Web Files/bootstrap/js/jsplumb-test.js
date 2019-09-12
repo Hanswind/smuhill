@@ -203,7 +203,7 @@ jsPlumb.ready(function () {
                     nodetype: $elem.attr('data-nodetype'),
                     positionX: parseInt($elem.css("left"), 10),
                     positionY: parseInt($elem.css("top"), 10)
-
+                    values: $('#'+$elem.attr('id')+'> .text_content').html()
                 });
             });
             var connections = [];
