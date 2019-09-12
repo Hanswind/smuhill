@@ -142,7 +142,7 @@ jsPlumb.ready(function () {
                 numberOfElements++;
                 numberOfTemplete2Txt++;
                 id = "templete2-text" + numberOfTemplete2Txt;
-                var $element = $('<div class="window templete2-button" id="' + id + '" contenteditable="true" onclick="$(this).focus();" data-text="버튼명작성"></div>');
+                var $element = $('<div class="window templete2-button text_content" id="' + id + '" contenteditable="true" onclick="$(this).focus();" data-text="버튼명작성"></div>');
                 $element.prependTo($(this).parent());
                 jsPlumb.addEndpoint($("#" + id), { anchor: "BottomCenter" }, exampleEndpoint2)
                 jsPlumb.repaintEverything();
@@ -203,7 +203,8 @@ jsPlumb.ready(function () {
                     nodetype: $elem.attr('data-nodetype'),
                     positionX: parseInt($elem.css("left"), 10),
                     positionY: parseInt($elem.css("top"), 10),
-                    values: $('#'+$elem.attr('id')+'> .text_content').html()
+                    values: $('#'+$elem.attr('id')+'> .text_content').html(),
+                    selection: $('#'+$elem.attr('id')).text()
                 });
             });
             var connections = [];
