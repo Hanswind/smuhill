@@ -108,7 +108,7 @@ jsPlumb.ready(function () {
                 id = "templete1_" + numberOfTemplete1;
 
             }
-            var $element=$('<div class=" templete1-body window" id="'+id+'" draggable="true"><form action="/text_create" method="post"><p><input type="text" name="title" placeholder="할일 제목"></p><p><input type="text" name="id" placeholder="할일 제목">"'+id+'"</p><p><textarea name="description" placeholder="할일 내용"></textarea></p><p><input type="submit"></p></form><div class="text_name"><div class="name_content"  contenteditable="true" onclick="$(this).focus();" >텍스트'+numberOfTemplete1+'</div></div><div class="text_content" contenteditable="true" onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div></div>');
+            var $element=$('<div class=" templete1-body window" id="'+id+'" draggable="true"><div class="text_name"><div class="name_content"  contenteditable="true" onclick="$(this).focus();" >텍스트'+numberOfTemplete1+'</div></div><div class="text_content" contenteditable="true" onclick="$(this).focus();" data-text="챗봇에 보여질 텍스트 내용을 작성하세요!"></div></div>');
             $(".svg-foreign").append($element);
             jsPlumb.draggable($("#" + id));
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
