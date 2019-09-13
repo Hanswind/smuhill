@@ -162,7 +162,7 @@ jsPlumb.ready(function () {
                 numberOfTemplete3++;
                 id = "templete3_" + numberOfTemplete3;
             }
-            var $element = $('<div class="window img" id="' + id + '"><div class="name_content img_name">img' + numberOfTemplete3 + '</div><div class="upload-button img-button"><img class="profile-pic" src="file://null"/></div><input class="file-upload" type="file" accept="image/*"/></div>');
+            var $element = $('<div class="window img" id="' + id + '"><div class="name_content img_name">img' + numberOfTemplete3 + '</div><div class="upload-button img-button" id="upload-button'+numberOfTemplete3+'"><img class="profile-pic" id="profile-pic'+numberOfTemplete3+'" src="file://null"/></div><input class="file-upload" type="file" accept="image/*"/></div>');
             $(".svg-foreign").append($element);
             jsPlumb.draggable($("#" + id));
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
