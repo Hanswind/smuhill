@@ -168,14 +168,15 @@ jsPlumb.ready(function () {
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
             jsPlumb.addEndpoint($("#" + id), { anchor: "BottomCenter" }, exampleEndpoint2);
             /*이미지업로드*/
-            $(document).ready(function () {
                 var readURL = function (input) {
                     if (input.files && input.files[0]) {
                         var reader = new FileReader();
+                        var $targetNode=$(input.parentNode.childNodes[1].childNodes[0]);
 
                         reader.onload = function (e) {
-                            $('.profile-pic').attr('src', e.target.result);
-                            $('.profile-pic').css("display", "inline-block");
+                            $targetNode.attr('src', e.target.result);
+                            $targetNode.css("display", "inline-block");
+                            
                         }
 
                         reader.readAsDataURL(input.files[0]);
@@ -186,9 +187,9 @@ jsPlumb.ready(function () {
                 });
 
                 $(".upload-button").on('click', function () {
+                    console.log($(this.parentNode.childNodes));
                     $(".file-upload").click();
                 });
-            });
         };
         function saveFlowchart(){
             var nodes = []
