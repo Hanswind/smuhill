@@ -7,6 +7,7 @@ var numberOfTemplete3 = 0;
 jsPlumb.ready(function () {
     
     jsPlumb.draggable($(".img"));
+    jsPlumb.draggable($(".templete4-body"));
     var instance = jsPlumb.getInstance({
         DragOptions: { cursor: 'pointer' },
         PaintStyle: { stroke: '#666' },

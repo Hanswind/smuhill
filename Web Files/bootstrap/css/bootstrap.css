@@ -479,6 +479,41 @@
 .file-upload {
   display: none;
 }
+
+/*비디오*/
+.templete4-body{
+    background-color: #fff;
+    border: solid 1px grey;
+    border-radius: 10px;
+    display: inline-table;
+    position: absolute;
+    z-index: 1;
+}
+.video-name{
+  position: relative;
+    top: -45px;
+    left: -16px;
+    background-color: rgb(0,0,0,0.1);
+    height: 100%;
+    margin: 1px;
+    margin-top: 2px;
+    font-weight: bold;
+    padding: 4px;
+}
+.video-button{
+  background-color: #f1f0f0;
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 150px;
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 500px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 2px;
+}
 .uparrow{
   position: relative;
   top: -5px;
