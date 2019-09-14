@@ -162,34 +162,36 @@ jsPlumb.ready(function () {
                 numberOfTemplete3++;
                 id = "templete3_" + numberOfTemplete3;
             }
-            var $element = $('<div class="window img" id="' + id + '"><div class="name_content img_name">img' + numberOfTemplete3 + '</div><div class="upload-button img-button" id="upload-button'+numberOfTemplete3+'"><img class="profile-pic" id="profile-pic'+numberOfTemplete3+'" src="file://null"/></div><input class="file-upload" type="file" accept="image/*"/></div>');
+            var $element = $('<div class="window img" id="' + id + '"><div class="name_content img_name">img' + numberOfTemplete3 + '</div><div class="upload-button img-button" id="upload-button'+numberOfTemplete3+'"><img class="profile-pic" id="profile-pic'+numberOfTemplete3+'" src="file://null"/></div><input class="file-upload upload-button'+numberOfTemplete3+'" type="file" accept="image/*"/></div>');
             $(".svg-foreign").append($element);
             jsPlumb.draggable($("#" + id));
             jsPlumb.addEndpoint($("#" + id), { anchor: "TopCenter" }, exampleEndpoint1);
             jsPlumb.addEndpoint($("#" + id), { anchor: "BottomCenter" }, exampleEndpoint2);
+            $(".file-upload").on('change', function () {
+                readURL(this);
+            });
+
+            $(".upload-button").on('click', function () {
+                var parentnode = $(this)[0].parentNode.childNodes[2]; 
+                console.log($("."+this.id));
+                $("."+this.id).click();
+            });
             /*이미지업로드*/
                 var readURL = function (input) {
                     if (input.files && input.files[0]) {
                         var reader = new FileReader();
-                        var $targetNode=$(input.parentNode.childNodes[1].childNodes[0]);
+                        var targetNode=$(input.parentNode.childNodes[1].childNodes[0]);
 
                         reader.onload = function (e) {
-                            $targetNode.attr('src', e.target.result);
-                            $targetNode.css("display", "inline-block");
+                            $(targetNode).attr('src', e.target.result);
+                            $(targetNode).css("display", "inline-block");
                             
                         }
 
                         reader.readAsDataURL(input.files[0]);
                     }
                 }
-                $(".file-upload").on('change', function () {
-                    readURL(this);
-                });
 
-                $(".upload-button").on('click', function () {
-                    console.log($(this.parentNode.childNodes));
-                    $(".file-upload").click();
-                });
         };
         function saveFlowchart(){
             var nodes = []

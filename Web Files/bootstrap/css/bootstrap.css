@@ -469,7 +469,7 @@
 }
 
 .file-upload {
-  display: none;
+  display: block;
 }
 
 /*비디오*/
