@@ -171,11 +171,6 @@ jsPlumb.ready(function () {
                 readURL(this);
             });
 
-            $(".upload-button").on('click', function () {
-                var parentnode = $(this)[0].parentNode.childNodes[2]; 
-                console.log($("."+this.id));
-                $("."+this.id).click();
-            });
             /*이미지업로드*/
                 var readURL = function (input) {
                     if (input.files && input.files[0]) {
@@ -193,6 +188,12 @@ jsPlumb.ready(function () {
                 }
 
         };
+        $(".svg-foreign").on("click",".upload-button",function(){
+            console.log($("."+this.id));
+            $("."+this.id).click();
+    
+        });
+
         function saveFlowchart(){
             var nodes = []
             $(".window").each(function (idx, elem) {
@@ -229,6 +230,7 @@ jsPlumb.ready(function () {
         }
         
     });
+
 
 
     jsPlumb.fire("jsPlumbDemoLoaded", instance);
