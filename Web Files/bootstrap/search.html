@@ -63,13 +63,19 @@
         }
 
     </style>
+    <script>
+        function search_data(){
+
+        }
+    </script>
 </head>
 <body>
     <div class="search">
         <input type="text" alt="검색" placeholder="  검색할 챗봇을 입력하세요" >
-        <input type="submit" value="검색" class="search_icon">
+        <input type="submit" value="검색" class="search_icon" onclick="search_data()">
         <div class="search_field">
             <div class="search_list">
+                <p class="searched_name" value=""></p>
                 <div class="icon_list">
                     <img src="../Objects/kakao-talk.svg">
                     <img src="../Objects/facebook.svg">
