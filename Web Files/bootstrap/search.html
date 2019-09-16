@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {background-color: #282828;}
+        input {
+            background-color: #fff;
+            width: 75%;
+            height: 40px;
+            font-size: 17px;
+            border: 7px solid rgb(255,192,0);
+            font-weight: bold;
+            color: #333;
+
+        }
+        .search {
+            position: relative;
+            top: 150px;
+            text-align: center;
+        }
+
+        .search_icon{
+            display: inline-block;
+            position: absolute;
+            width:56px;
+            height:56px;
+            background-color: rgb(255,192,0);
+            font-size:16px;
+            padding: 0;
+            border: 0;
+         }
+        .search_icon:hover {
+            background-color: rgb(255,168,0);
+
+        }
+        .search_field {
+            width: calc(75% + 61px);
+            position: absolute;
+            background-color: rgb(255,255,255,0.2);
+            height: 600px;
+            left:150px;
+        }
+        .search_field > div {
+            position: relative;
+            width: 100%;
+            border: 1px solid #999;
+            height: 20%;
+            background-color: rgb(255,255,255, 0.9);
+        }
+        .icon_list > img {
+            width:70px;
+            height:70px;
+            margin-left:20px;
+        }
+        .icon_list {
+            display: inline-block;
+            background-color: rgb(0,0,0,0);
+            position: relative;
+            right:-411px;
+            top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="text" alt="검색" placeholder="  검색할 챗봇을 입력하세요" >
+        <input type="submit" value="검색" class="search_icon">
+        <div class="search_field">
+            <div class="search_list">
+                <div class="icon_list">
+                    <img src="../Objects/kakao-talk.svg">
+                    <img src="../Objects/facebook.svg">
+                    <img src="../Objects/telegram.svg">
+                </div>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

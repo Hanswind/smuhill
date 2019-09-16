@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {background-color: #282828;}
+        h1 {
+            text-align: center;
+            font-size: 70px;
+            color: #ddd;
+            font-weight: bold;
+        }
+        input {
+            background-color: #fff;
+            width: 400px;
+            height: 40px;
+        }
+        .input_row {
+            position:relative;
+            text-align: center;
+            top: 130px;
+            margin:20px;
+        }
+        .name {
+            position: relative;
+            top:130px;
+        }
+        .login {
+            position: relative;
+            width: 405px;
+            top: 10px;
+            height:65px;
+            background-color: rgb(255,192,0);
+            font-size: 21px;
+            font-weight: 600;
+            border: 0px;
+            color:#333;
+        }
+        .login:hover {
+            background-color: rgb(255,168,0);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="name">스뮤고개</h1>
+    <div class="id_area">
+        <div class="input_row" id="id_area">
+            <span class="input_box">
+                <input type="text" id="id" name="id" placeholder="아이디" maxlength="41" value=""  >
+            </span>
+        </div>
+    </div>
+    <div class="pw_area">
+        <div class="input_row" id="pw_area">
+            <span class="input_box">
+                <input type="password" id="pw" name="pw" placeholder="비밀번호">
+            </span>
+        </div>
+    </div>
+    <div class="login_area">
+        <div class="input_row">
+            <input type="submit" title="로그인" alt="로그인" value="로그인" class="login" onclick="sumbit(this.event)">
+        </div>
+    </div>
+    <div class="account"></div>
+    </div>
+</body>
+</html>
